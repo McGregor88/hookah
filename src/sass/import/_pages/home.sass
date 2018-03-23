@@ -1,0 +1,45 @@
+/**
+ * Home styles
+ */
+.s-home-slider
+    .swiper-slide
+        height: 608px
+        padding-top: 198px
+        padding-left: 110px
+        background-size: cover
+        &__title
+            position: absolute
+            top: 108px
+            left: 0
+            h1
+                display: inline-block
+                padding-left: 110px
+                padding-right: 22px
+                font-size: 62px
+                line-height: 88px
+            + span
+                font-size: 30px
+        .price
+            margin-top: -16px
+            margin-bottom: 30px
+        .price-new
+            font-size: 71px
+            margin-right: 10px
+        .price-old
+            display: inline-block
+            vertical-align: top
+            margin-top: 38px
+            font-size: 25px
+            color: #dfdfdf
+            text-decoration: line-through
+    .swiper-container-horizontal>.swiper-pagination-bullets
+        bottom: 107px
+    .swiper-pagination
+        padding-left: 102px
+    .swiper-pagination-bullet
+        background: #fff
+        transition: background-color .25s ease
+        &:hover
+            background: $accent
+    .swiper-pagination-bullet-active
+        background: $accent

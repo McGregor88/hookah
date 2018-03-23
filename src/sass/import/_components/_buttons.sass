@@ -1,0 +1,57 @@
+/**
+ * Buttons styles
+ */
+
+button
+    border: none
+    outline: none
+    box-shadow: none
+    padding: 0
+    line-height: 1em
+    background: inherit
+
+/*  Buttons */
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus, 
+.btn:active:focus,
+.btn:focus
+    outline: none
+
+.btn
+    &:active
+        box-shadow: none
+    &.btn-sm
+    &.btn-md,
+    &.btn-lg,
+        border-radius: 4px
+        text-shadow: none
+        transition: background-color .25s ease
+        &:hover,
+        &:focus
+            border: none
+    &.btn-sm
+        padding: 0 35px
+        line-height: 35px
+        font-size: 12px        
+    &.btn-md
+        padding: 0 30px
+        line-height: 43px
+        font-size: 14px
+    &.btn-lg
+        padding: 0 50px
+        line-height: 49px
+        font-size: 16px
+    &.btn-primary
+        background-color: $accent
+        border: none
+        outline: none
+        &:hover,
+        &:focus,
+        &:active:focus,
+        &:active:hover,
+        &:active
+            background-color: $btn-hover
+            border: none

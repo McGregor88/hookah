@@ -1,0 +1,48 @@
+/**
+ * Pagination styles
+ */
+
+.pagination
+    margin: 0
+    padding-top: 5px
+    vertical-align: top
+
+.pagination>li:first-child>a,
+.pagination>li:first-child>span
+    border-radius: 4px
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover
+    background-color: $accent
+    border: none
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+    color: #fff
+    background-color: $accent
+    border: none
+
+.pagination>li>a,
+.pagination>li>span
+    padding: 0
+    width: 40px
+    height: 40px
+    line-height: 40px
+    background-color: #efefef
+    border: none
+    border-radius: 4px
+    margin-left: 4px
+    color: #898888
+    transition: background-color .25s ease
+
+.pagination>li.pag-btn
+    a
+        width: 20px
+        background: #fff
+    &:hover .icon::after
+        opacity: 1

@@ -1,0 +1,35 @@
+/**
+ * Section features styles
+ */
+
+.s-features
+	ul
+		padding: 
+			top: 40px
+			bottom: 40px
+	.feature-item
+		position: relative
+		width: 33.33%
+		padding:
+			top: 34px
+			left: 160px
+			right: 5px
+			bottom: 29px
+		cursor: default
+		&__img
+			position: absolute
+			top: 0
+			left: 0
+			width: 138px
+			height: 138px
+			padding-top: 35px
+			font-size: 0
+			transition: background-color .25s ease
+		&:hover
+			.feature-item__img
+				background-color: #fff
+		&__title
+			margin-bottom: 9px
+		&__description
+			display: inline-block
+			line-height: 1.2em

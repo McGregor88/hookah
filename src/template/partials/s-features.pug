@@ -1,0 +1,26 @@
+//- Section features
+section.s-features.black-theme
+	.container_fix
+		//- Variable
+		-
+			var items = [
+				{
+					title: "Быстрая доставка",
+					description: "Мы гарантируем всем нашим покупателям быструю доставку"
+				},
+				{
+					title: "Качество товара",
+					description: "У нас всегда свежий и только качественный товар"
+				},
+				{
+					title: "Лучшие цены",
+					description: "У нас Вы найдете нужные Вам товары по хорошим ценам"
+				}
+			];
+		ul.wrapper
+			each item, index in items
+				li.feature-item.color-gray
+					.feature-item__img.img-circle.dark-gray-theme.text-center
+						img(src="src/image/features/feature_" + index + ".png" alt=item.title)/
+					h3.feature-item__title #{item.title}
+					span.feature-item__description #{item.description}

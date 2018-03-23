@@ -1,0 +1,339 @@
+/**
+ * Form elements
+ */
+
+.form-control
+	transition: border-color .25s ease
+	&::placeholder
+		color: #a9a9a9
+	&.error
+		border-color: #f00 !important
+
+/*	Form field	*/
+.form-field
+	position: relative
+	font-size: 16px
+	margin-bottom: 20px
+	.form-control
+		width: 100%
+		height: 50px
+		line-height: 48px
+		padding-left: 22px
+		font-family: $medium
+		outline: none
+		box-shadow: none
+		background: #fff
+		border-radius: 4px
+		border: 1px solid #ebebeb
+		&:hover,
+		&:focus
+			outline: none
+			box-shadow: none
+			border-color: #d7d7d7
+	textarea
+		height: 136px
+		padding-top: 18px
+		outline: none
+		box-shadow: none
+		background: #fff
+		resize: unset
+
+/*	Consent	*/
+.consent
+	font-size: 12px
+	margin-bottom: 13px
+	font-family: $medium
+	a
+		color: #777
+		&:hover
+			color: $accent
+
+/*	Form head	*/
+.form__head
+	padding-left: 25px
+	margin-bottom: 25px
+	h4
+		line-height: 59px
+		color: #656565
+
+/*  Modal Fancybox */
+.fancybox-slide
+	.modal
+		width: 405px
+		overflow: visible
+		border-radius: 0
+		padding: 0
+		&__head
+			padding: 35px 10px
+		h3
+			line-height: 1em
+		&__body
+			padding: 38px 45px
+	.consent
+		padding-left: 17px
+		padding-right: 17px
+		margin-bottom: 22px
+	.success_modal
+		width: 350px
+		.modal__body
+			padding: 42px
+		h3
+			margin-bottom: 12px
+		p
+			line-height: 1.2em
+
+/* Search form */
+.search
+	.form-control,
+	.input-group-btn
+		transition: border-color .25s ease
+	&:hover,
+	&:focus
+		.form-control,
+		.input-group-btn
+			border-color: $accent
+	.form-control:focus
+		border-color: $accent
+		+ .input-group-btn
+			border-color: $accent
+
+/*	Select	*/
+.select2,
+.select2-selection
+	outline: none
+
+.select2-container--default
+	.select2-selection--single
+		background-color: #fff
+		border: none
+		border-radius: 4px
+		.select2-selection__rendered
+			line-height: 37px
+			color: #313131
+		.select2-selection__arrow
+			width: 13px
+			height: 100%
+			top: 0
+			right: 14px
+			b
+				border-style: none
+				left: 0
+				margin-top: -4px
+				width: 14px
+				height: 8px
+				margin-left: 0
+				background: url("../img/select-down.png") no-repeat center center
+	.select2-results>.select2-results__options
+		max-height: 400px
+		padding-left: 12px
+		padding-right: 12px
+		box-shadow: 0 0 40px rgb(238, 238, 238)
+	.select2-results__option[aria-disabled=true]
+		display: none
+	.select2-results__option--highlighted[aria-selected]
+		position: relative
+		background-color: #fff
+		color: #313131
+		z-index: 10
+		&:hover,
+		&:focus
+	  		color: #fff
+		&:hover::after
+			position: absolute
+			content: ""
+			top: 0
+			left: -12px
+			width: calc(100% + 23px)
+			height: 100%
+			background-color: $accent
+			z-index: -1
+	.select2-results__option[aria-selected=true]
+		background-color: #fff
+		color: $accent
+
+.select2-search--dropdown
+	display: none
+
+.select2-container
+	.select2-selection--single
+		height: 37px
+		.select2-selection__rendered
+			padding-left: 12px
+
+.select2-container--default.select2-container--open.select2-container--below
+	.select2-selection--singl
+		border-bottom: 1px solid #fff
+
+.select2-container--default.select2-container--open
+	.select2-selection--single
+		.select2-selection__rendered
+			color: $accent
+
+.select2-dropdown
+	background-color: #fff
+	border: none
+	border-radius: 0
+
+.select2-results__option
+	padding: 0
+	padding-top: 12px
+	padding-bottom: 12px
+	border-bottom: 1px solid #ebebeb
+	&:last-child
+		border-bottom: none
+
+.select2-container
+	margin-top: 5px
+
+/*	Select ordering	*/
+.select-box
+	font-size: 0
+	margin-bottom: 16px
+	.label-caption
+		width: 102px
+		vertical-align: middle
+		line-height: 1.2em
+		margin-right: 16px
+		margin-bottom: 0
+	.select-control
+		display: inline-block
+		width: calc(100% - 118px)
+	.select2-container
+		margin-top: 0
+		.select2-selection--single
+			height: 47px
+			border: 1px solid #ebebeb
+			font-size: 14px
+			.select2-selection__rendered
+				padding-left: 15px
+				line-height: 45px
+				color: #c2c2c2
+	.select2-container--default
+		.select2-selection--single
+			.select2-selection__arrow
+				width: 45px
+				right: 0
+				background-color: #ebebeb
+				border-top-right-radius: 4px
+				border-bottom-right-radius: 4px
+				b
+					left: 50%
+					margin-left: -7px
+
+/*	Radio	*/
+.radio-controls
+	label
+		font-weight: normal
+		color: $gray
+		margin-right: 25px
+
+.radio
+	vertical-align: top
+	width: 15px
+	height: 15px
+	margin: 0
+.radio + label
+	cursor: pointer
+	padding: 0 18px
+	border-radius: 4px
+	transition: color .25s ease, background-color .25s ease
+.radio:not(checked)
+	position: absolute
+	opacity: 0
+.radio:not(checked) + label
+	position: relative
+	color: #a9a9a9
+.radio:not(checked)
+	+ label
+		&:before,
+		&:after
+			display: none
+		&:hover
+			color: #232323
+			background: #fff
+.radio:checked
+	+ label
+		color: #232323
+		background: #fff
+
+.radio-inline
+	display: inline-block
+	vertical-align: top
+	padding-left: 0
+	.radio-button
+		display: inline-block
+		vertical-align: top
+		letter-spacing: 0
+
+/* Checkbox */
+.checkbox
+	vertical-align: top
+	margin: 0 3px 0 0
+	width: 17px
+	height: 17px
+
+.checkbox + label
+	cursor: pointer
+	line-height: 1em
+
+.checkbox:not(checked)
+	position: absolute
+	opacity: 0
+
+.checkbox:not(checked) + label
+	position: relative
+	padding: 0 0 0 23px
+
+.checkbox:not(checked) + label:before
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	width: 16px
+	height: 16px
+	border-radius: 0
+	background: #ffffff
+	border: 1px solid #efefef
+	box-shadow: none
+
+.checkbox:checked + label:before
+	background: url(../image/icons/check.png) no-repeat center
+
+.checkboxes-inline
+	.checkbox-field
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 15px
+		width: 50%
+		letter-spacing: 0
+
+/*  noUiSlider */
+.noUi-connect
+	background: $accent
+.noUi-target
+	background: #fff
+	border: none
+	border-radius: 0
+	box-shadow: none
+.noUi-horizontal
+	height: 2px
+	.noUi-handle
+		width: 10px
+		height: 10px
+		top: -5px
+		left: -5px
+.noUi-handle
+	cursor: pointer
+	background: $accent
+	border: none
+	outline: none
+	border-radius: 50%
+	box-shadow: none
+	&::after,
+	&::before
+		display: none
+.noUi-tooltip
+	padding: 0
+	font-family: $medium
+	border: none
+	color: #4f4f4f

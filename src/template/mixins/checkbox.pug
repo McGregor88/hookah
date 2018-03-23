@@ -1,0 +1,15 @@
+//- Mixin params: 
+//-   checked: boolean
+//-	  id: 	string
+//-   label:	string
+
+mixin checkbox(obj)
+	- var checked_state = false; if (obj && obj.checked === true) checked_state = true;
+
+	.checkbox-field
+		input.checkbox(
+			type="checkbox" 
+			id=`${obj.id}`
+			checked=checked_state
+		)/
+		label(for=`${obj.id}`) #{obj.label}

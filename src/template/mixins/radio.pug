@@ -1,0 +1,17 @@
+//- Mixin params: 
+//-   checked: boolean
+//-	  name:    string
+//-	  id: 	   string
+//-   label:   string
+
+mixin radio(obj)
+	- var checked_state = false; if (obj && obj.checked === true) checked_state = true;
+
+	.radio-button.text-center
+		input.radio(
+			type="radio" 
+			id=`${obj.id}`
+			name=`${obj.name}`
+			checked=checked_state
+		)/
+		label(for=`${obj.id}`) #{obj.label}

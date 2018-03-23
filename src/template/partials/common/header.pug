@@ -1,0 +1,108 @@
+//- header.pug
+
+include ../../data/header_nav.pug
+
+header.page-header
+    #top-header.top-header.gray-theme
+        .container_fix
+            .row
+                .col_1-4.col_phone
+                    .header-phone
+                        a(href="tel:79251000399")
+                            span.icon.icon-phone
+                            span.bold.hidden-1200 +7 (925) 100-03-99
+                        p.hidden-1200 Звонки принимаем круглосуточно!
+                .col_1-2.col_logo
+                    #logo.header-logo.text-center
+                        a(href=base_url class="header-logo__link")
+                            img(src="src/image/logo.png" alt="Кальянчик")/
+                .col_1-4.col_nav
+                    nav#top
+                        #top-links.top-links
+                            ul.wrapper
+                                li
+                                    #cart.header-cart
+                                        a(href="ordering.html")
+                                            span.icon.icon-cart
+                                        span.top-links__title.hidden-992 Ваша корзина
+                                        button.dropdown-toggle.hidden-992(type="button" data-toggle="dropdown" data-loading-text="Загрузка...")
+                                            span#cart-total 0 товаров
+                                li
+                                    .header-user
+                                        a(href="account.html")
+                                            span.icon.icon-user
+                                        span.top-links__title.hidden-992 Личный кабинет
+                                        a.top-link.hidden-992(href="sign_in.html") Войти 
+                                        span.hidden-992 /
+                                        |
+                                        |
+                                        a.top-link.hidden-992(href="sign_in.html") Зарегистрироваться
+    .bottom-header.black-theme
+        .page-wrapper
+            nav#main-menu.header-menu.nav-collapse
+                ul
+                    each menu_item in menu_items
+                        - var active_class = ""; if (header_menu_active == menu_item.title) active_class = " active";
+                        li(class="nav__item"  + active_class)
+                            if menu_item.title !== "Каталог товаров"
+                                a.color-white(href=menu_item.url) #{menu_item.title}
+                            else
+                                a.js-menu-level1.color-white(href=menu_item.url) #[span(class="icon icon-arrow--right" style={"display":"none"})] #{menu_item.title}
+                                nav.sub-menu.black-theme
+                                    ul.sub-menu__list
+                                        li.sub-menu__item(onclick="void(0);")
+                                            a(href="javascript:void(0);") #[span(class="icon icon-arrow--right")] Безникотиновая смесь для кальяна
+                                            ul.sub-menu__item-list.black-theme
+                                                li
+                                                    a(href="javascript:void(0);") Смесь 1
+                                                li
+                                                    a(href="javascript:void(0);") Смесь 2
+                                                li
+                                                    a(href="javascript:void(0);") Смесь 3
+                                        li.sub-menu__item(onclick="void(0);")
+                                            a(href="javascript:void(0);") #[span(class="icon icon-arrow--right")] Кальяны
+                                            ul.sub-menu__item-list.black-theme
+                                                li
+                                                    a(href="javascript:void(0);") Кальян 1
+                                                li
+                                                    a(href="javascript:void(0);") Кальян 2
+                                                li
+                                                    a(href="javascript:void(0);") Кальян 3
+                                        li.sub-menu__item(onclick="void(0);")
+                                            a(href="javascript:void(0);") #[span(class="icon icon-arrow--right")] Курительные камни
+                                            ul.sub-menu__item-list.black-theme
+                                                li
+                                                    a(href="javascript:void(0);") Камень 1
+                                                li
+                                                    a(href="javascript:void(0);") Камень 2
+                                                li
+                                                    a(href="javascript:void(0);") Камень 3
+                                        li.sub-menu__item(onclick="void(0);")
+                                            a(href="javascript:void(0);") #[span(class="icon icon-arrow--right")] Табак для кальяна
+                                            ul.sub-menu__item-list.black-theme
+                                                li
+                                                    a(href="javascript:void(0);") Табак 1
+                                                li
+                                                    a(href="javascript:void(0);") Табак 2
+                                                li
+                                                    a(href="javascript:void(0);") Табак 3
+                                        li.sub-menu__item(onclick="void(0);")
+                                            a(href="javascript:void(0);") #[span(class="icon icon-arrow--right")] Уголь для кольяна
+                                            ul.sub-menu__item-list.black-theme
+                                                li
+                                                    a(href="javascript:void(0);") Кокосовый
+                                                li
+                                                    a(href="javascript:void(0);") Древесный
+                                                li
+                                                    a(href="javascript:void(0);") Быстровоспламеняющийся
+                                        li.sub-menu__item(onclick="void(0);")
+                                            a(href="javascript:void(0);") #[span(class="icon icon-arrow--right")] Аксессуары
+                                            ul.sub-menu__item-list.black-theme
+                                                li
+                                                    a(href="javascript:void(0);") Аксессуар 1
+                                                li
+                                                    a(href="javascript:void(0);") Аксессуар 2
+                                                li
+                                                    a(href="javascript:void(0);") Аксессуар 3
+                button.nav-btn
+                    span

@@ -1,0 +1,20 @@
+/**
+ * Breadcrumb styles
+ */
+
+.breadcrumb
+	margin-bottom: 8px
+	padding: 0
+	background-color: inherit
+	font-size: 13px
+	li, a
+		line-height: 44px
+		color: #404040
+	a
+		&:hover,
+		&:focus
+			color: $accent
+	>li+li:before
+		padding: 0 4px
+		color: #404040
+		content: "\2014"

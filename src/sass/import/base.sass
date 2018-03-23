@@ -1,0 +1,155 @@
+*::-webkit-input-placeholder
+    color: #666
+    opacity: 1
+
+*:-moz-placeholder
+    color: #666
+    opacity: 1
+
+*::-moz-placeholder
+    color: #666
+    opacity: 1
+
+*:-ms-input-placeholder
+    color: #666
+    opacity: 1
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+    -webkit-appearance: none
+    margin: 0
+
+input[type='number']
+    -moz-appearance: textfield
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+    color: #666
+    border-color: #f16c6c
+    border-color: #d7d7d7
+body input:required:valid,
+body textarea:required:valid
+    color: #141414
+    border-color: #d7d7d7
+
+input[type=checkbox],
+input[type=radio]
+    margin: 0
+
+html, body
+    height: 100%
+
+body
+    min-width: 320px
+    position: relative
+    background: #fff
+    font-size: 16px
+    color: #232323
+    font-family: $regular
+    overflow-x: hidden
+    opacity: 1
+
+h1, h2, h3, h4, ul, p
+    margin: 0
+h1, h2, h3, h4
+    font-family: $medium
+h1
+    font-size: 36px
+h2
+    font-size: 30px
+h3
+    font-size: 24px
+h4
+    font-size: 22px
+
+img
+    max-width: 100%
+    object-fit: cover
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+.img-fluid
+    display: block
+    width: 100%
+    height: auto
+
+a
+    color: #141414
+    transition: color .25s ease
+    &:hover,
+    &:focus,
+    &:active,
+    &.active
+        color: $accent
+        text-decoration: none
+
+ul
+    list-style: none
+    padding: 0
+    &.wrapper
+        li
+            display: inline-block
+            vertical-align: top
+            letter-spacing: 0
+
+li.active
+    a
+        color: $accent
+
+b, strong, .bold
+    font-weight: normal
+    font-family: $bold
+.bolder
+    font-weight: bold
+
+blockquote
+    position: relative
+    padding: 10px 0px
+    margin: 0
+    border: none
+    p
+        font-size: 22px
+    &::after
+        position: absolute
+        content: ""
+        top: 0
+        left: -44px
+        width: 10px
+        height: 100%
+        background: $accent
+
+label
+    vertical-align: top
+    font-family: $medium
+    font-weight: normal
+    margin: 0
+    color: #4f4f4f
+
+.caption
+    display: inline-block
+    vertical-align: top
+    margin-right: 15px
+    line-height: 43px
+    font-family: $medium
+    color: #4f4f4f
+
+.ls-0
+    letter-spacing: 0
+
+.light-gray-theme
+    background: #fbfbfb
+.gray-theme
+    background: #efefef
+.dark-gray-theme
+    background: #292929
+.black-theme
+    background: #232323
+
+.color-white
+    color: #fff
+.color-black
+    color: #000
+.color-gray
+    color: $gray

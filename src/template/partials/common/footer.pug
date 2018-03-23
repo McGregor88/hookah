@@ -1,0 +1,46 @@
+footer.page-footer
+	.footer-top.gray-theme
+		.container_fix
+			.row
+				.col_1-4
+					.footer-categories
+						h4 Каталог товаров
+						ul
+							li: a(href="javascript:void(0);") Безникотиновая смесь для кальяна
+							li: a(href="javascript:void(0);") Кальяны
+							li: a(href="javascript:void(0);") Курительные камни
+							li: a(href="javascript:void(0);") Табак для кальяна
+							li: a(href="javascript:void(0);") Уголь для кальяна
+							li: a(href="javascript:void(0);") Аксессуары
+				.col_1-4
+					.footer-menu
+						nav.nav-footer
+							ul
+								li: a(href="catalog.html") Каталог товаров
+								li: a(href="about.html") О нас
+								li: a(href="promotions.html") Акции и спецпредложения
+								li: a(href="delivery.html") Доставка и оплата
+								li: a(href="articles.html") Полезные статьи
+								li: a(href="reviews.html") Отзывы клиентов
+								li: a(href="contacts.html") Наши контакты
+				.col_1-2
+					.footer-contacts.text-right
+
+						#search.search.input-group
+							input.form-control.input-lg(type="text" name="search" value="" placeholder="Поиск товаров по сайту")/
+							span.input-group-btn
+								button(type="button")
+									span.icon.icon-search
+
+						.footer-phone
+							a(href="tel:79251000399")
+								span.bold +7 (925) 100-03-99
+							p Звонки принимаем круглосуточно!
+
+						a.btn.btn-md.btn-primary(href="javascript:void(0);" data-fancybox="" data-src="#callback") Заказать обратный звонок
+	.footer-bottom
+		.container_fix
+			.footer-copyright.text-center &copy; #[a(href=base_url) Кальянчик.ру], 2011-2018
+
+//- Modal windows
+include ../modal/all

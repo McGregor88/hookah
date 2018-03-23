@@ -1,0 +1,32 @@
+//- Mixin params: 
+//-   hit: boolean
+//-   new: boolean
+//-   sale: boolean
+//-	  imgUrl: string
+//-	  name: string
+//-	  price: string
+//-	  priceOld: string
+//-	  btn: string
+
+mixin product(obj)
+	a.product-layout.text-center(href="product.html")
+		if (obj.hit === true)
+			span.product-label.label-hit.color-white Hit
+		else if (obj.new === true)
+			span.product-label.label-new.color-white New
+		else if (obj.sale === true)
+			span.product-label.label-sale.color-white Sale
+		.product-thumb.transition
+			.image-wrapper
+				.image
+					img.img-responsive(src="src/image/products/" + obj.imgUrl + ".jpg" alt=`${obj.name}`)/
+			.caption.color-black
+				h4 #{obj.name}
+				if obj.priceOld
+					p.price
+						span.price-new.bold #{obj.price}
+						span.price-old #{obj.priceOld}
+				else
+					p.price #{obj.price}
+			button.btn.btn-lg.btn-primary(type="button" onclick="cart.add('1');")
+				span #{obj.btn}

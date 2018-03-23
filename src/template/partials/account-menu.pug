@@ -1,0 +1,12 @@
+//- Account menu
+
+//- Data
+include ../data/account_nav.pug
+
+nav#account-menu.account-nav
+	ul.wrapper
+		each acc_item in acc_items
+			- var active_class = ""; if (account_menu_active == acc_item.title) active_class = " active";
+			li(class="nav__item"  + active_class)
+				span.icon(class=acc_item.icon_name)
+				a(href=acc_item.url + "#content") #{acc_item.title}
