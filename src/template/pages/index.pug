@@ -10,361 +10,362 @@ html(lang="ru")
 		include ../partials/common/head.pug
 	body
 		include ../partials/common/header.pug
-		//- Home slider
-		section.s-home-slider
-			.page-wrapper
-				.swiper-container.main-swiper-container
-					.swiper-wrapper.color-white
-						.swiper-slide(style={"background-image":"url(src/image/home/slide.jpg)"})
-							.swiper-slide__title
-								h1.black-theme.bold Кальян Ager
-							span по цене
-							p.price
-								span.price-new.bold 5 450 р.
-								span.price-old 6500 р.
-							button.btn.btn-lg.btn-primary(type="button" onclick="cart.add('1');")
-								span Добавить в корзину
-						.swiper-slide(style={"background-image":"url(src/image/home/slide.jpg)"})
-							.swiper-slide__title
-								h1.black-theme.bold Кальян Ager
-							span по цене
-							p.price
-								span.price-new.bold 6 450 р.
-								span.price-old 7500 р.
-							button.btn.btn-lg.btn-primary(type="button" onclick="cart.add('1');")
-								span Добавить в корзину
-						.swiper-slide(style={"background-image":"url(src/image/home/slide.jpg)"})
-							.swiper-slide__title
-								h1.black-theme.bold Кальян Ager
-							span по цене
-							p.price
-								span.price-new.bold 7 450 р.
-								span.price-old 8500 р.
-							button.btn.btn-lg.btn-primary(type="button" onclick="cart.add('1');")
-								span Добавить в корзину
+		#common-home
+			//- Home slider
+			section.s-home-slider
+				.page-wrapper
+					.swiper-container.main-swiper-container
+						.swiper-wrapper.color-white
+							.swiper-slide(style={"background-image":"url(src/image/home/slide.jpg)"})
+								.swiper-slide__title
+									h1.black-theme.bold Кальян Ager
+								span по цене
+								p.price
+									span.price-new.bold 5 450 р.
+									span.price-old 6500 р.
+								button.btn.btn-lg.btn-primary(type="button" onclick="cart.add('1');")
+									span Добавить в корзину
+							.swiper-slide(style={"background-image":"url(src/image/home/slide.jpg)"})
+								.swiper-slide__title
+									h1.black-theme.bold Кальян Ager
+								span по цене
+								p.price
+									span.price-new.bold 6 450 р.
+									span.price-old 7500 р.
+								button.btn.btn-lg.btn-primary(type="button" onclick="cart.add('1');")
+									span Добавить в корзину
+							.swiper-slide(style={"background-image":"url(src/image/home/slide.jpg)"})
+								.swiper-slide__title
+									h1.black-theme.bold Кальян Ager
+								span по цене
+								p.price
+									span.price-new.bold 7 450 р.
+									span.price-old 8500 р.
+								button.btn.btn-lg.btn-primary(type="button" onclick="cart.add('1');")
+									span Добавить в корзину
 
-					.swiper-button-next
-					.swiper-button-prev
+						.swiper-button-next
+						.swiper-button-prev
 
-					.swiper-pagination
+						.swiper-pagination
 
-		//- Content
-		#content.home_content
-			.section-heading.gray-theme.text-center
-				.container_fix
-					h2.color-black Популярные новинки месяца
-			.section-products 
-				.products
-					.page-wrapper
-						.swiper-container.products-swiper-container
-							.swiper-wrapper
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "pop/product_1",
-										name: "Кальян Ager (Brown) современный",
-										price: "6 789 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										new: true,
-										imgUrl: "pop/product_2",
-										name: "Кальян Ager (Purple)",
-										price: "3 627 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										imgUrl: "pop/product_3",
-										name: "Кальян Ager",
-										price: "6 789 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "pop/product_4",
-										name: "Кальян Ager (Purple)",
-										price: "3 627 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "pop/product_1",
-										name: "Кальян Ager (Brown) современный",
-										price: "6 789 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										new: true,
-										imgUrl: "pop/product_2",
-										name: "Кальян Ager (Purple)",
-										price: "3 627 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										imgUrl: "pop/product_3",
-										name: "Кальян Ager",
-										price: "6 789 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "pop/product_4",
-										name: "Кальян Ager (Purple)",
-										price: "3 627 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "pop/product_1",
-										name: "Кальян Ager (Brown) современный",
-										price: "6 789 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										new: true,
-										imgUrl: "pop/product_2",
-										name: "Кальян Ager (Purple)",
-										price: "3 627 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										imgUrl: "pop/product_3",
-										name: "Кальян Ager",
-										price: "6 789 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "pop/product_4",
-										name: "Кальян Ager (Purple)",
-										price: "3 627 р.",
-										btn: "В корзину"
-									})
-
-							.swiper-pagination
-
-							.product-button.text-right
-								a.btn.btn-lg.btn-primary(href="catalog.html") Перейти в каталог
-			//- Features
-			include ../partials/s-features.pug
-
-			//- Hits section
-			.section-heading.gray-theme.text-center
-				.container_fix
-					h2.color-black Хиты продаж
-			.section-products 
-				.products
-					.page-wrapper
-						.swiper-container.products-swiper-container
-							.swiper-wrapper
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_1",
-										name: "Табак для кальяна Al Fakher современный",
-										price: "49 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_2",
-										name: "Табак для кальяна Al Fakher (Сhocolate)",
-										price: "97 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_3",
-										name: "Табак для кальяна Al Fakher (Mint)",
-										price: "59 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_4",
-										name: "Табак для кальяна Al Fakher (Orange)",
-										price: "87 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_1",
-										name: "Табак для кальяна Al Fakher современный",
-										price: "49 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_2",
-										name: "Табак для кальяна Al Fakher (Сhocolate)",
-										price: "97 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_3",
-										name: "Табак для кальяна Al Fakher (Mint)",
-										price: "59 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_4",
-										name: "Табак для кальяна Al Fakher (Orange)",
-										price: "87 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_1",
-										name: "Табак для кальяна Al Fakher современный",
-										price: "49 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_2",
-										name: "Табак для кальяна Al Fakher (Сhocolate)",
-										price: "97 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_3",
-										name: "Табак для кальяна Al Fakher (Mint)",
-										price: "59 р.",
-										btn: "В корзину"
-									})
-								.swiper-slide
-									+product({
-										hit: true,
-										imgUrl: "hit/product_4",
-										name: "Табак для кальяна Al Fakher (Orange)",
-										price: "87 р.",
-										btn: "В корзину"
-									})
-
-							.swiper-pagination
-
-							.product-button.text-right
-								a.btn.btn-lg.btn-primary(href="catalog.html") Перейти в каталог
-
-			//- Sale section
-			.section-heading.black-theme.text-center
-				.container_fix
-					h2.color-gray Акционные товары
-			.section-products.dark-gray-theme
-				.products.products-sale
+			//- Content
+			#content.home_content
+				.section-heading.gray-theme.text-center
 					.container_fix
-						.swiper-container.sale-swiper-container
-							.swiper-wrapper
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "sale/product_1",
-										name: "Табак для кальяна Al Fakher",
-										price: "149 р.",
-										priceOld: "256 р.",
-										btn: "Добавить в корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "sale/product_1",
-										name: "Кальян сильный Mya Mozza",
-										price: "149 р.",
-										priceOld: "256 р.",
-										btn: "Добавить в корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "sale/product_2",
-										name: "Кальян Mya Mozza 456",
-										price: "4 649 р.",
-										priceOld: "5 256 р.",
-										btn: "Добавить в корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "sale/product_1",
-										name: "Табак для кальяна Al Fakher",
-										price: "149 р.",
-										priceOld: "256 р.",
-										btn: "Добавить в корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "sale/product_1",
-										name: "Кальян сильный Mya Mozza",
-										price: "149 р.",
-										priceOld: "256 р.",
-										btn: "Добавить в корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "sale/product_2",
-										name: "Кальян Mya Mozza 456",
-										price: "4 649 р.",
-										priceOld: "5 256 р.",
-										btn: "Добавить в корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "sale/product_1",
-										name: "Табак для кальяна Al Fakher",
-										price: "149 р.",
-										priceOld: "256 р.",
-										btn: "Добавить в корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "sale/product_1",
-										name: "Кальян сильный Mya Mozza",
-										price: "149 р.",
-										priceOld: "256 р.",
-										btn: "Добавить в корзину"
-									})
-								.swiper-slide
-									+product({
-										sale: true,
-										imgUrl: "sale/product_2",
-										name: "Кальян Mya Mozza 456",
-										price: "4 649 р.",
-										priceOld: "5 256 р.",
-										btn: "Добавить в корзину"
-									})
+						h2.color-black Популярные новинки месяца
+				.section-products 
+					.products
+						.page-wrapper
+							.swiper-container.products-swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "pop/product_1",
+											name: "Кальян Ager (Brown) современный",
+											price: "6 789 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											new: true,
+											imgUrl: "pop/product_2",
+											name: "Кальян Ager (Purple)",
+											price: "3 627 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											imgUrl: "pop/product_3",
+											name: "Кальян Ager",
+											price: "6 789 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "pop/product_4",
+											name: "Кальян Ager (Purple)",
+											price: "3 627 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "pop/product_1",
+											name: "Кальян Ager (Brown) современный",
+											price: "6 789 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											new: true,
+											imgUrl: "pop/product_2",
+											name: "Кальян Ager (Purple)",
+											price: "3 627 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											imgUrl: "pop/product_3",
+											name: "Кальян Ager",
+											price: "6 789 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "pop/product_4",
+											name: "Кальян Ager (Purple)",
+											price: "3 627 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "pop/product_1",
+											name: "Кальян Ager (Brown) современный",
+											price: "6 789 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											new: true,
+											imgUrl: "pop/product_2",
+											name: "Кальян Ager (Purple)",
+											price: "3 627 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											imgUrl: "pop/product_3",
+											name: "Кальян Ager",
+											price: "6 789 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "pop/product_4",
+											name: "Кальян Ager (Purple)",
+											price: "3 627 р.",
+											btn: "В корзину"
+										})
 
-							.swiper-pagination
+								.swiper-pagination
 
-							.product-button.text-right
-								a.btn.btn-lg.btn-primary(href="catalog.html") Перейти в каталог
+								.product-button.text-right
+									a.btn.btn-lg.btn-primary(href="catalog.html") Перейти в каталог
+				//- Features
+				include ../partials/s-features.pug
+
+				//- Hits section
+				.section-heading.gray-theme.text-center
+					.container_fix
+						h2.color-black Хиты продаж
+				.section-products 
+					.products
+						.page-wrapper
+							.swiper-container.products-swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_1",
+											name: "Табак для кальяна Al Fakher современный",
+											price: "49 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_2",
+											name: "Табак для кальяна Al Fakher (Сhocolate)",
+											price: "97 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_3",
+											name: "Табак для кальяна Al Fakher (Mint)",
+											price: "59 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_4",
+											name: "Табак для кальяна Al Fakher (Orange)",
+											price: "87 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_1",
+											name: "Табак для кальяна Al Fakher современный",
+											price: "49 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_2",
+											name: "Табак для кальяна Al Fakher (Сhocolate)",
+											price: "97 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_3",
+											name: "Табак для кальяна Al Fakher (Mint)",
+											price: "59 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_4",
+											name: "Табак для кальяна Al Fakher (Orange)",
+											price: "87 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_1",
+											name: "Табак для кальяна Al Fakher современный",
+											price: "49 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_2",
+											name: "Табак для кальяна Al Fakher (Сhocolate)",
+											price: "97 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_3",
+											name: "Табак для кальяна Al Fakher (Mint)",
+											price: "59 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_4",
+											name: "Табак для кальяна Al Fakher (Orange)",
+											price: "87 р.",
+											btn: "В корзину"
+										})
+
+								.swiper-pagination
+
+								.product-button.text-right
+									a.btn.btn-lg.btn-primary(href="catalog.html") Перейти в каталог
+
+				//- Sale section
+				.section-heading.black-theme.text-center
+					.container_fix
+						h2.color-gray Акционные товары
+				.section-products.dark-gray-theme
+					.products.products-sale
+						.container_fix
+							.swiper-container.sale-swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "sale/product_1",
+											name: "Табак для кальяна Al Fakher",
+											price: "149 р.",
+											priceOld: "256 р.",
+											btn: "Добавить в корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "sale/product_1",
+											name: "Кальян сильный Mya Mozza",
+											price: "149 р.",
+											priceOld: "256 р.",
+											btn: "Добавить в корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "sale/product_2",
+											name: "Кальян Mya Mozza 456",
+											price: "4 649 р.",
+											priceOld: "5 256 р.",
+											btn: "Добавить в корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "sale/product_1",
+											name: "Табак для кальяна Al Fakher",
+											price: "149 р.",
+											priceOld: "256 р.",
+											btn: "Добавить в корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "sale/product_1",
+											name: "Кальян сильный Mya Mozza",
+											price: "149 р.",
+											priceOld: "256 р.",
+											btn: "Добавить в корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "sale/product_2",
+											name: "Кальян Mya Mozza 456",
+											price: "4 649 р.",
+											priceOld: "5 256 р.",
+											btn: "Добавить в корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "sale/product_1",
+											name: "Табак для кальяна Al Fakher",
+											price: "149 р.",
+											priceOld: "256 р.",
+											btn: "Добавить в корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "sale/product_1",
+											name: "Кальян сильный Mya Mozza",
+											price: "149 р.",
+											priceOld: "256 р.",
+											btn: "Добавить в корзину"
+										})
+									.swiper-slide
+										+product({
+											sale: true,
+											imgUrl: "sale/product_2",
+											name: "Кальян Mya Mozza 456",
+											price: "4 649 р.",
+											priceOld: "5 256 р.",
+											btn: "Добавить в корзину"
+										})
+
+								.swiper-pagination
+
+								.product-button.text-right
+									a.btn.btn-lg.btn-primary(href="catalog.html") Перейти в каталог
 
 		//- Bottom content
 		.bottom-content.text-center

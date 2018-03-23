@@ -8,7 +8,7 @@
 	height: 53px
 	margin-top: -26.5px
 	background-size: auto
-	background-image: url(../image/icons/sprite_nav.png)
+	background-image: url(../image/icons/sprite_arrows.png)
 	&::after
 		position: absolute
 		content: ''
@@ -16,21 +16,21 @@
 		left: 0
 		width: 100%
 		height: 100%
-		background-image: url(../image/icons/sprite_nav.png)
+		background-image: url(../image/icons/sprite_arrows.png)
 		opacity: 0
 		transition: opacity .5s ease
 	&:hover::after
 		opacity: 1
 .swiper-button-next
 	right: 20px
-	background-position: -49px 0px
+	background-position: -98px 0px
 	&::after
-		background-position: 0px 0px
+		background-position: -49px 0px
 .swiper-button-prev
 	background-position: 0px -73px
 	left: 20px
 	&::after
-		background-position: -98px 0px
+		background-position: 0px 0px
 
 .fancybox-close-small
 	top: -44px
@@ -118,3 +118,14 @@
 			background-position: 0px -32px
 			&::after
 				background-position: -62px 0px
+
+	&.icon-up,
+	&.icon-down
+		width: 11px
+		height: 7px
+		margin-top: 7px
+		background-image: url("../image/icons/sprite_arrows.png")
+	&.icon-up
+		background-position: -62px -146px
+	&.icon-down
+		background-position: -147px -98px

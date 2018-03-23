@@ -1,0 +1,90 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-down--hover {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: 0px -146px;
+  width: 11px;
+  height: 7px;
+}
+.icon-down {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: -147px -98px;
+  width: 11px;
+  height: 7px;
+}
+.icon-next-lg--hover {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: -49px 0px;
+  width: 29px;
+  height: 53px;
+}
+.icon-next-lg {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: -98px 0px;
+  width: 29px;
+  height: 53px;
+}
+.icon-next-md--hover {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: -49px -73px;
+  width: 16px;
+  height: 29px;
+}
+.icon-next-md {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: -85px -73px;
+  width: 16px;
+  height: 29px;
+}
+.icon-prev-lg--hover {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: 0px 0px;
+  width: 29px;
+  height: 53px;
+}
+.icon-prev-lg {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: 0px -73px;
+  width: 29px;
+  height: 53px;
+}
+.icon-prev-md--hover {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: -147px 0px;
+  width: 16px;
+  height: 29px;
+}
+.icon-prev-md {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: -147px -49px;
+  width: 16px;
+  height: 29px;
+}
+.icon-up--hover {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: -31px -146px;
+  width: 11px;
+  height: 7px;
+}
+.icon-up {
+  background-image: url(../img/icons/sprite_arrows.png);
+  background-position: -62px -146px;
+  width: 11px;
+  height: 7px;
+}

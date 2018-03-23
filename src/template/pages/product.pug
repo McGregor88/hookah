@@ -1,0 +1,185 @@
+//- Variables
+- var header_menu_active = "Каталог товаров";
+- var pagetitle = "Кальян Mya Mozza";
+
+//- Mixins
+include ../mixins/product
+
+doctype html
+html(lang="ru")
+	head
+		include ../partials/common/head.pug
+	body
+		include ../partials/common/header.pug
+
+		#product-product
+			.page-heading.gray-theme
+				.container_fix.text-center
+					ul.breadcrumb
+						li: a(href=base_url) #{home_title}
+						li: a(href="catalog.html") #{header_menu_active}
+						li: span #{pagetitle}
+					h1.color-black #{pagetitle}
+
+			//- Content
+			#content.product_content
+				.container_fix
+					.row
+						.col_1-2
+							.thumbnails
+						.col_1-2
+							h2 #{pagetitle}
+							#product
+								.form-field.quantity
+									label.control-label(for="input-quantity") Количество
+									input#input-quantity.form-control(type="number" name="quantity" min="1" max="20" step="1" value="1" size="2")/
+									input(type="hidden" name="product_id" value="43")/
+								button#button-cart.btn.btn-primary.btn-lg(type="button" data-loading-text="Загрузка...") Добавить в корзину
+
+				//- Related section
+				.section-heading.gray-theme.text-center
+					.container_fix
+						h2.color-black С этим товаром часто покупают
+				.section-products 
+					.products
+						.page-wrapper
+							.swiper-container.products-swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_1",
+											name: "Табак для кальяна Al Fakher современный",
+											price: "49 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_2",
+											name: "Табак для кальяна Al Fakher (Сhocolate)",
+											price: "97 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_3",
+											name: "Табак для кальяна Al Fakher (Mint)",
+											price: "59 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_4",
+											name: "Табак для кальяна Al Fakher (Orange)",
+											price: "87 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_1",
+											name: "Табак для кальяна Al Fakher современный",
+											price: "49 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_2",
+											name: "Табак для кальяна Al Fakher (Сhocolate)",
+											price: "97 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_3",
+											name: "Табак для кальяна Al Fakher (Mint)",
+											price: "59 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_4",
+											name: "Табак для кальяна Al Fakher (Orange)",
+											price: "87 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_1",
+											name: "Табак для кальяна Al Fakher современный",
+											price: "49 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_2",
+											name: "Табак для кальяна Al Fakher (Сhocolate)",
+											price: "97 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_3",
+											name: "Табак для кальяна Al Fakher (Mint)",
+											price: "59 р.",
+											btn: "В корзину"
+										})
+									.swiper-slide
+										+product({
+											hit: true,
+											imgUrl: "hit/product_4",
+											name: "Табак для кальяна Al Fakher (Orange)",
+											price: "87 р.",
+											btn: "В корзину"
+										})
+
+								.swiper-pagination
+
+		//- Features
+		include ../partials/s-features.pug
+		//- Bottom content
+		include ../partials/bottom_content.pug
+
+		include ../partials/common/footer.pug			
+		include ../partials/common/js.pug
+		script.
+			var productsSwiper = new Swiper('.products-swiper-container', {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				slidesPerGroup: 4,
+				loop: true,
+				loopFillGroupWithBlank: true,
+				speed: 700,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				},
+				breakpoints: {
+					1200: {
+						slidesPerView: 3,
+						slidesPerGroup: 3,
+					},
+					992: {
+						slidesPerView: 2,
+						slidesPerGroup: 2,						
+					},
+					768: {
+						slidesPerView: 2,
+						slidesPerGroup: 2,
+						spaceBetween: 10,
+					},
+					480: {
+						slidesPerView: 1,
+						slidesPerGroup: 1,
+					}
+				}
+			});

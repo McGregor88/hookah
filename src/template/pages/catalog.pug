@@ -13,14 +13,14 @@ html(lang="ru")
 	body
 		include ../partials/common/header.pug
 
-		//- Content
-		#content.catalog_content
+		#product-category
 			.page-heading.gray-theme
 				.container_fix.text-center
 					ul.breadcrumb
 						li: a(href=base_url) #{home_title}
 						li: span #{header_menu_active}
 					h1.color-black #{header_menu_active}
+		.catalog_content
 			.catalog_content__inner
 				.container_fix
 					.row
@@ -199,180 +199,181 @@ html(lang="ru")
 												label: "Четыре"
 											})
 						.col_3-4
-							//- Catalog panel
-							.catalog-head.gray-theme
-								.row
-									.col_1-2
-										span.caption Сортировка по:
-										.radio-buttons.radio-inline.wrapper
-											+radio({
-												checked: true,
-												name: "sorting",
-												id: "sorting_1",
-												label: "Новизне"
-											})
-											+radio({
-												name: "sorting",
-												id: "sorting_2",
-												label: "Дешевые"
-											})
-											+radio({
-												name: "sorting",
-												id: "sorting_3",
-												label: "Дорогие"
-											})
-									.col_1-2.text-right
-										span.caption Показать по:
-										.radio-buttons.radio-inline.wrapper
-											+radio({
-												checked: true,
-												name: "show_by",
-												id: "show_by_18",
-												label: "18"
-											})
-											+radio({
-												name: "show_by",
-												id: "show_by_36",
-												label: "36"
-											})
-											+radio({
-												name: "show_by",
-												id: "show_by_all",
-												label: "Все"
-											})
-							//- Products
-							.catalog-products
-								.products
-									.row
-										.col_1-3
-											+product({
-												hit: true,
-												imgUrl: "pop/product_1",
-												name: "Кальян Ager (Brown) современный",
-												price: "6 789 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												imgUrl: "pop/product_2",
-												name: "Кальян Ager (Purple)",
-												price: "3 627 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												new: true,
-												imgUrl: "pop/product_3",
-												name: "Кальян Ager",
-												price: "6 789 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												imgUrl: "pop/product_2",
-												name: "Кальян Ager (Purple)",
-												price: "3 627 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												sale: true,
-												imgUrl: "pop/product_1",
-												name: "Кальян Magic (Brown) современный",
-												price: "6 789 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												imgUrl: "pop/product_2",
-												name: "Кальян Ager (Purple)",
-												price: "3 627 р.",
-												btn: "В корзину"
-											})
-										.col
-											.promotion-block.color-white(style={"background-image":"url(src/image/promo/promotion.jpg)"})
-												.promotion__title
-													h2.black-theme.bold Кальян Ager
-												.row
-													.col_1-3
-														p.promotion__price.bold
-															span.promotion__price-new 5 450 р.
-															span.promotion__price-old 6500 р.
-													.col_1-2
-														button.btn.btn-sm.btn-primary(type="button" onclick="cart.add('10');")
-															span Добавить в корзину
-										.col_1-3
-											+product({
-												sale: true,
-												imgUrl: "pop/product_1",
-												name: "Кальян Ager (Brown) современный",
-												price: "6 789 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												imgUrl: "pop/product_2",
-												name: "Кальян Amy Deluxe (Purple)",
-												price: "3 627 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												imgUrl: "pop/product_3",
-												name: "Кальян Ager (Brown) современный",
-												price: "6 789 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												hit: true,
-												imgUrl: "pop/product_2",
-												name: "Кальян Ager (Purple)",
-												price: "3 627 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												new: true,
-												imgUrl: "pop/product_1",
-												name: "Кальян Magic (Brown) современный",
-												price: "6 789 р.",
-												btn: "В корзину"
-											})
-										.col_1-3
-											+product({
-												sale: true,
-												imgUrl: "pop/product_2",
-												name: "Кальян Ager (Purple)",
-												price: "3 627 р.",
-												btn: "В корзину"
-											})
-								.catalog-buttons
+							//- Content
+							#content
+								.catalog-head.gray-theme
 									.row
 										.col_1-2
-											button.btn.btn-lg.btn-primary Показать еще
+											span.caption Сортировка по:
+											.radio-buttons.radio-inline.wrapper
+												+radio({
+													checked: true,
+													name: "sorting",
+													id: "sorting_1",
+													label: "Новизне"
+												})
+												+radio({
+													name: "sorting",
+													id: "sorting_2",
+													label: "Дешевые"
+												})
+												+radio({
+													name: "sorting",
+													id: "sorting_3",
+													label: "Дорогие"
+												})
 										.col_1-2.text-right
-											//- Pagination
-											#pagination
-												ul.pagination.text-center
-													li.pag-btn.text-left
-														a(href="javascript:void(0);")
-															span.icon.icon-pag--first
-													li.pag-btn.text-left
-														a(href="javascript:void(0);")
-															span.icon.icon-pag--prev
-													li.active
-														span 1
-													li
-														a(href="javascript:void(0);") 2
-													li
-														a(href="javascript:void(0);") 3
-													li.pag-btn.text-right
-														a(href="javascript:void(0);")
-															span.icon.icon-pag--next
-													li.pag-btn.text-right
-														a(href="javascript:void(0);")
-															span.icon.icon-pag--last
+											span.caption Показать по:
+											.radio-buttons.radio-inline.wrapper
+												+radio({
+													checked: true,
+													name: "show_by",
+													id: "show_by_18",
+													label: "18"
+												})
+												+radio({
+													name: "show_by",
+													id: "show_by_36",
+													label: "36"
+												})
+												+radio({
+													name: "show_by",
+													id: "show_by_all",
+													label: "Все"
+												})
+								//- Products
+								.catalog-products
+									.products
+										.row
+											.col_1-3
+												+product({
+													hit: true,
+													imgUrl: "pop/product_1",
+													name: "Кальян Ager (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													new: true,
+													imgUrl: "pop/product_3",
+													name: "Кальян Ager",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_1",
+													name: "Кальян Magic (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col
+												.promotion-block.color-white(style={"background-image":"url(src/image/promo/promotion.jpg)"})
+													.promotion__title
+														h2.black-theme.bold Кальян Ager
+													.row
+														.col_1-3
+															p.promotion__price.bold
+																span.promotion__price-new 5 450 р.
+																span.promotion__price-old 6500 р.
+														.col_1-2
+															button.btn.btn-sm.btn-primary(type="button" onclick="cart.add('10');")
+																span Добавить в корзину
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_1",
+													name: "Кальян Ager (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													imgUrl: "pop/product_2",
+													name: "Кальян Amy Deluxe (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													imgUrl: "pop/product_3",
+													name: "Кальян Ager (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													hit: true,
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													new: true,
+													imgUrl: "pop/product_1",
+													name: "Кальян Magic (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+									.catalog-buttons
+										.row
+											.col_1-2
+												button.btn.btn-lg.btn-primary Показать еще
+											.col_1-2.text-right
+												//- Pagination
+												#pagination
+													ul.pagination.text-center
+														li.pag-btn.text-left
+															a(href="javascript:void(0);")
+																span.icon.icon-pag--first
+														li.pag-btn.text-left
+															a(href="javascript:void(0);")
+																span.icon.icon-pag--prev
+														li.active
+															span 1
+														li
+															a(href="javascript:void(0);") 2
+														li
+															a(href="javascript:void(0);") 3
+														li.pag-btn.text-right
+															a(href="javascript:void(0);")
+																span.icon.icon-pag--next
+														li.pag-btn.text-right
+															a(href="javascript:void(0);")
+																span.icon.icon-pag--last
 
 		//- Features
 		include ../partials/s-features.pug
