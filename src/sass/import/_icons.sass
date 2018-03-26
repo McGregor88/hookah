@@ -121,11 +121,26 @@
 
 	&.icon-up,
 	&.icon-down
+		position: relative
 		width: 11px
 		height: 7px
 		margin-top: 7px
 		background-image: url("../image/icons/sprite_arrows.png")
+		&::after
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-image: url("../image/icons/sprite_arrows.png")
+			opacity: 0
+			transition: opacity .5s ease
 	&.icon-up
 		background-position: -62px -146px
+		&::after
+			background-position: -31px -146px
 	&.icon-down
 		background-position: -147px -98px
+		&::after
+			background-position: 0px -146px

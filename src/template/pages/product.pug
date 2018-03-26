@@ -29,12 +29,23 @@ html(lang="ru")
 							.thumbnails
 						.col_1-2
 							h2 #{pagetitle}
+							p Есть в наличии
+							hr
 							#product
-								.form-field.quantity
-									label.control-label(for="input-quantity") Количество
-									input#input-quantity.form-control(type="number" name="quantity" min="1" max="999" step="1" value="1" size="2")/
-									input(type="hidden" name="product_id" value="43")/
-								button#button-cart.btn.btn-primary.btn-lg(type="button" data-loading-text="Загрузка...") Добавить в корзину
+								.row
+									.col_1-2
+										h1.price
+											span.price-new.bold 3 627 р.
+											span.price-old 4 627 р.
+									.col_1-2
+										.quantity.text-right
+											label.control-label(for="input-quantity") Количество
+											.form-field
+												input#input-quantity.form-control(type="number" name="quantity" min="1" max="999" step="1" value="1" size="2")/
+												input(type="hidden" name="product_id" value="43")/
+								.product-buttons
+									button#button-cart.btn.btn-lg.btn-primary(type="button" data-loading-text="Загрузка...") Добавить в корзину
+									a.btn.btn-lg.btn-dark(href="javasckript:void(0);") Купить в один клик
 
 				//- Related section
 				.section-heading.gray-theme.text-center

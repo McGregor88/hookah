@@ -40,20 +40,26 @@
 
 /* Quantity */
 .quantity
-	position: relative
-
-.quantity .form-control
-	width: 116px
-	height: 43px
-	line-height: 1.65
-	float: left
-	display: block
-	padding: 0
-	margin: 0
-	padding-left: 20px
-	border: 1px solid #ebebeb
-	&:focus
-		outline: 0
+	label
+		margin-right: 14px
+		line-height: 43px
+	.form-field
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 116px
+		height: 43px
+	.form-control
+		width: 100%
+		height: 100%
+		display: block
+		float: left
+		padding: 0
+		margin: 0
+		padding-left: 16px
+		border: 1px solid #ebebeb
+		&:focus
+			outline: 0
 
 .quantity-nav
 	float: left
@@ -66,10 +72,6 @@
 	cursor: pointer
 	width: 20px
 	text-align: center
-	color: #333
-	font-size: 13px
-	font-family: $regular
-	line-height: 1.7
 	-webkit-transform: translateX(-100%)
 	transform: translateX(-100%)
 	-webkit-user-select: none
@@ -77,6 +79,9 @@
 	-ms-user-select: none
 	-o-user-select: none
 	user-select: none
+	&:hover .icon
+		&::after
+			opacity: 1
 
 .quantity-button.quantity-up
 	position: absolute
