@@ -162,6 +162,11 @@ input[type=radio]
 			line-height: 1em
 		&__body
 			padding: 38px 45px
+		&.modal-lg
+			width: 519px
+			.consent
+				padding-left: 75px
+				padding-right: 75px
 	.consent
 		padding-left: 17px
 		padding-right: 17px
@@ -174,6 +179,39 @@ input[type=radio]
 			margin-bottom: 12px
 		p
 			line-height: 1.2em
+	.product__img,
+	.product__info
+		display: inline-block
+		vertical-align: top
+		letter-spacing: 0
+	.product__img
+		width: 124px
+		margin-right: 24px
+		.thumbnail
+			height: 124px
+			padding-top: 22px
+			img
+				max-height: 80px
+	.product__info
+		width: calc(100% - 148px)
+		h5
+			margin-top: -4px
+			margin-bottom: 8px
+		p
+			margin-bottom: 26px
+			font-size: 12px
+			color: #4f4f4f
+		.form-field
+			margin-bottom: 0
+		.price
+			display: inline-block
+			vertical-align: top
+			margin-left: 30px
+			line-height: 43px
+			font-size: 24px
+	hr
+		margin-top: 38px
+		margin-bottom: 38px
 
 /* Search form */
 .search
