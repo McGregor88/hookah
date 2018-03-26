@@ -1,0 +1,81 @@
+//- Variables
+- var header_menu_active = "Доставка и оплата";
+
+doctype html
+html(lang="ru")
+	head
+		include ../partials/common/head.pug
+	body
+		include ../partials/common/header.pug
+
+		#information-information
+			.page-heading.gray-theme
+				.container_fix.text-center
+					ul.breadcrumb
+						li: a(href=base_url) #{home_title}
+						li: span #{header_menu_active}
+					h1.color-black #{header_menu_active}
+			//- Content
+			#content.delivery_content
+				.page-introtext.text-center
+					.container-xs
+						p: b.bolder.
+							Для выполнения Вашего заказа, нам необходимо минимальное время на его 
+							обработку (1-2 ч.), иногда оно может быть увеличино из-за поступления заказа 
+							ночью или в выходные и праздничные дни. 
+				section.s-delivery(style={"background-image":"url(src/image/delivery/features-bg.jpg)"})
+					.container-xs
+						ul.delivery-list.color-white
+							li.delivery-item
+								span.delivery-item__title.bold 1 000 Р
+								p.delivery-item__description Минимальный заказ
+							li.delivery-item
+								span.delivery-item__title.bold 12:00 -19:00
+								p.delivery-item__description Время осуществления заказа
+							li.delivery-item
+								span.delivery-item__title.bold 300 Р
+								p.delivery-item__description Курьерская доставка в пределах МКАД
+				.page-content
+					.container-xs
+						p.
+							Первым этапом обработки заказа является голосовое подтверждение. Вы 
+							можете позвонить нам сами, или наши менеджеры Вам перезвонят, чтобы 
+							уточнить время и место доставки.  
+						p.
+							При заказе вам необходимо: указать адрес, по которому следует доставить 
+							выбранные товары, а также точную дату и время.  
+						h2.color-black Доставка по Москве в пределах МКАД
+						p.
+							В связи с возрастающим объемом заказов в праздничные и выходные дни, мы 
+							убедительно просим Вас размещать заказы заранее. Тогда мы сможем 
+							гарантировать вам своевременную доставку.
+						h3.color-black Оплата производится наличными курьеру!
+						ul.payment-list
+							li.payment-item
+								h5.payment-item__title.bold 300 р
+								p.payment-item__description #[b(class="bolder") Курьерская доставка] в пределах МКАД
+							li.payment-item
+								h5.payment-item__title.bold #[span от] 500 р
+								p.payment-item__description #[b(class="bolder") Курьерская доставка] за пределы МКАД
+							li.payment-item
+								h5.payment-item__title.bold 200 Р
+								p.payment-item__description #[b(class="bolder") Дополнительный выезд] нашего курьера
+						p.
+							Если получатель товара не является плательщиком, к вам подъедет курьер за 
+							оплатой, а затем Ваш заказ будет доставлен по указанному Вами адресу. В этом 
+							случае дополнительный выезд курьера будет оплачиваться вами в размере 200 р.
+						h2.color-black Доставка в регионы РФ
+						p.
+							Доставка заказов в другие регионы осуществляется любым выбранным Вами 
+							возможным способом, по предварительному согласованию.
+						p: b.bolder.
+							Также обращаем внимание, что при пересылке товаров наложенным 
+							платежом, Почта России взымает с покупателя дополнительную сумму за 
+							наложенный платеж (7% от стоимости наложенного платежа), упаковку 
+							(коробку) и страхование посылки!
+
+		//- Features
+		include ../partials/s-features.pug
+
+		include ../partials/common/footer.pug			
+		include ../partials/common/js.pug
