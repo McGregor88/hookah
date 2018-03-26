@@ -26,7 +26,7 @@
             top: 50%
             font-family: $medium
             color: #4f4f4f
-            transition: opacity .25s ease
+            transition: opacity .25s ease, color .25s ease
         &::before
             content: "\002B"
             right: 22px
@@ -39,6 +39,10 @@
             margin-top: -15.5px
             font-size: 22px
             opacity: 1
+        &:hover
+            &::before,
+            &::after
+                color: $accent
 
 .collapsed
     .panel-head
@@ -61,6 +65,14 @@
         width: auto
         left: 13px
         bottom: 31px
+.related-products
+    padding-bottom: 15px
+    .swiper-container-horizontal>.swiper-pagination-bullets
+        display: block
+        left: 0
+        bottom: 0
+        width: 100%
+        text-align: center
 
 /* Product layout */
 

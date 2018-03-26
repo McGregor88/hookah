@@ -27,32 +27,66 @@ html(lang="ru")
 					.row
 						.col_1-2
 							.thumbnails
+								.swiper-container.product-swiper-container
+									.swiper-wrapper
+										.swiper-slide
+											.thumbnail: img.img-responsive(src="src/image/products/product.jpg" alt=`${pagetitle}`)/
+										.swiper-slide
+											.thumbnail: img.img-responsive(src="src/image/products/product.jpg" alt=`${pagetitle}`)/
+										.swiper-slide
+											.thumbnail: img.img-responsive(src="src/image/products/product.jpg" alt=`${pagetitle}`)/
+									.swiper-button-next
+									.swiper-button-prev
 						.col_1-2
-							h2 #{pagetitle}
-							p Есть в наличии
-							hr
-							#product
-								.row
-									.col_1-2
-										h1.price
-											span.price-new.bold 3 627 р.
-											span.price-old 4 627 р.
-									.col_1-2
-										.quantity.text-right
-											label.control-label(for="input-quantity") Количество
-											.form-field
-												input#input-quantity.form-control(type="number" name="quantity" min="1" max="999" step="1" value="1" size="2")/
-												input(type="hidden" name="product_id" value="43")/
-								.product-buttons
-									button#button-cart.btn.btn-lg.btn-primary(type="button" data-loading-text="Загрузка...") Добавить в корзину
-									a.btn.btn-lg.btn-dark(href="javasckript:void(0);") Купить в один клик
+							.product-info
+								h2.color-black #{pagetitle}
+								p.color-black Есть в наличии
+								hr
+								#product
+									.row
+										.col_1-2
+											h1.price.bold
+												span.price-new.color-black 3 627 р.
+												span.price-old 4 627 р.
+										.col_1-2
+											.quantity.text-right
+												label.control-label(for="input-quantity") Количество
+												.form-field
+													input#input-quantity.form-control(type="number" name="quantity" min="1" max="999" step="1" value="1" size="2")/
+													input(type="hidden" name="product_id" value="43")/
+									.product-buttons
+										button#button-cart.btn.btn-lg.btn-primary(type="button" data-loading-text="Загрузка...") Добавить в корзину
+										a.btn.btn-lg.btn-dark(href="javasckript:void(0);") Купить в один клик
+
+								a(href="javascript:void(0);" data-toggle="collapse" data-target="#product-description" aria-expanded="false" aria-controls="product-description")
+									.panel-head.panel-collapse.gray-theme
+										h4 Описание товара
+								.product-info__description
+									#product-description.collapse.in
+										p.
+											Кальян, соединение состовное, высота 74 см, цвет шахты кальяна 
+											золото с синими вставками с тисненым узором. Комплектация: шахта. 
+											колба стекло, чаша  керамическая, блюдце, шланг кож зам, 
+											уплотнители, щипцы, инструкция. Кальян упакован в кейс. Всего 
+											описания и доставки должно быть пять строк.
+
+									a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#product-delivery" aria-expanded="false" aria-controls="product-delivery")
+										.panel-head.panel-collapse.gray-theme
+											h4 Доставка и оплата
+									#product-delivery.collapse
+										p.
+											Кальян, соединение состовное, высота 74 см, цвет шахты кальяна 
+											золото с синими вставками с тисненым узором. Комплектация: шахта. 
+											колба стекло, чаша  керамическая, блюдце, шланг кож зам, 
+											уплотнители, щипцы, инструкция. Кальян упакован в кейс. Всего 
+											описания и доставки должно быть пять строк.
 
 				//- Related section
 				.section-heading.gray-theme.text-center
 					.container_fix
 						h2.color-black С этим товаром часто покупают
 				.section-products 
-					.products
+					.products.related-products
 						.page-wrapper
 							.swiper-container.products-swiper-container
 								.swiper-wrapper
@@ -163,6 +197,14 @@ html(lang="ru")
 		include ../partials/common/footer.pug			
 		include ../partials/common/js.pug
 		script.
+			var productSwiper = new Swiper('.product-swiper-container', {
+				loop: true,
+				speed: 700,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				},
+			});
 			var productsSwiper = new Swiper('.products-swiper-container', {
 				slidesPerView: 4,
 				spaceBetween: 20,
