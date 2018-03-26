@@ -6,11 +6,11 @@
 
 /* Laptop */
 @media only screen and (max-width : 1366px)
-	.col_logo
-		width: calc(25% - 20px)
-	.col_nav
-		width: calc(50% - 20px)
 	header
+		.col_logo
+			width: calc(25% - 20px)
+		.col_nav
+			width: calc(50% - 20px)
 		.top-links
 			margin-left: 0
 			text-align: right
@@ -45,7 +45,7 @@
 		width: 220px
 		text-align: left
 		background-color: #000
-		background-color: rgba(0,0,0,.6)
+		background-color: rgba(0,0,0,.8)
 		transition: .3s
 		z-index: 1000
 		.nav__item
@@ -76,9 +76,6 @@
 				> a
 					line-height: 1em
 					padding: 20px 10px
-					span.icon.icon-arrow--right
-						display: inline-block !important
-						top: 2px
 					&:focus
 						background: inherit
 				&.active
@@ -86,64 +83,35 @@
 						background: inherit
 						color: $accent
 		.header-phone
-			padding-top: 10px
+			padding-top: 20px
+			padding-left: 45px
 			span.icon
 				margin-right: 0
-		.header-logo
-			padding-left: 50px
-			text-align: left
+		.col_logo
+			width: calc(50% - 20px)
+		.col_nav
+			width: calc(25% - 20px)
 		.top-links
-			padding-right: 20px
 			li
-				padding-top: 10px
+				padding-top: 20px
+				padding-left: 0
 			span.icon
-				top: 10px
+				position: static
+		.header-cart
+			margin-right: 20px
 
 	.nav-btn
 		display: block
-
-	.col_phone
-		position: absolute
-		top: 20px
-		right: 0
-		width: 19px
-	.col_logo,
-	.col_nav
-		width: calc(50% - 20px)
 
 	header
 		.header-menu
 			li:hover
 				.sub-menu
 					display: none
-		.header-menu.show
-			.js-menu-level1
-				&.js-menu--clicked
-					+ .sub-menu
-						display: block
-						background-color: #000
-						background-color: rgba(0,0,0,.8)
-						left: 210px
-						top: 52px
-						padding-top: 0
-						padding-left: 0
-						width: 250px
-						> ul
-							li
-								border-bottom: none
 		.sub-menu__item
 			&:hover
 				.sub-menu__item-list
 					display: none
-			&.sub-menu__item--clicked
-				.sub-menu__item-list
-					display: block
-					top: 0
-					width: 200px
-					right: -200px
-					height: calc(100% + 24px)
-					padding-top: 10px
-					padding-left: 0
 
 /* Medium Devices */
 @media only screen and (max-width : 1024px)
@@ -151,15 +119,7 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	header
-		.top-links
-			padding-right: 35px
-			li
-				padding-top: 20px
-			span.icon
-				position: static
-		.header-cart
-			margin-right: 0
+	/**/
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 960px)
@@ -175,109 +135,68 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	header
-		.sub-menu__item
-			&.sub-menu__item--clicked
-				.sub-menu__item-list
-					width: 150px
-					right: -150px
+	/**/
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 640px)
-	.nav-btn
-		top: 14px
-	.col_logo
-		width: calc(65% - 20px)
-	.col_nav
-		width: calc(35% - 20px)
-	.col_phone
-		top: 14px
-	.header-logo
-		img
-			max-height: 48px
-	.header-menu
-		left: -200px
-		width: 200px
-	header
-		.top-links
-			padding-right: 45px
-			li
-				padding-top: 14px
-				&:first-child
-					padding-left: 0
-		.header-menu.show
-			.js-menu-level1
-				&.js-menu--clicked
-					+ .sub-menu
-						width: 175px
-						left: 190px
+	/**/
 
 /* HTC One */
 @media only screen and (max-width : 540px)
-	.header-menu
-		left: -160px
-		width: 160px
 	header
-		.header-menu.show
-			.js-menu-level1
-				&.js-menu--clicked
-					+ .sub-menu
-						width: 160px
-						left: 150px
+		.col_phone,
+		.col_nav
+			width: calc(20% - 20px)
+		.col_logo
+			width: calc(60% - 20px)
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.nav-btn
+		top: 24.5px
+		right: -35px
 	header
-		.header-menu.show
-			.js-menu-level1
-				&.js-menu--clicked
-					+ .sub-menu
-						ul
-							> li
-								font-size: 10px
-		.header-menu
-			.sub-menu__list::after
-				display: none
-			.sub-menu__item
-				position: relative
-
-		.sub-menu__item
-			&.sub-menu__item--clicked
-				.sub-menu__item-list
-					right: unset
-					top: 30px
-					left: 0
-					height: auto
-					width: 160px
-					padding-bottom: 20px
-					z-index: 150
-
+		.col_phone,
+		.col_nav
+			width: calc(25% - 20px)
+		.col_logo
+			width: calc(50% - 20px)
+		.header-phone
+			padding-top: 15px
+			padding-left: 35px
+		.header-logo
+			img
+				max-height: 48px
+		.top-links 
+			li
+				padding-top: 15px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 400px)
-	.col_logo,
-	.col_nav
-		margin: 0 5px
-	.col_logo
-		width: calc(65% - 10px)
-	.col_nav
-		width: calc(35% - 10px)
-	.col_phone
-		top: 9px
+	.nav-btn
+		top: 15.5px
 	header
 		.row
 			margin: 0 -5px
-		.top-links
-			padding-right: 35px
+		.col_phone,
+		.col_logo,
+		.col_nav
+			margin-left: 5px
+			margin-right: 5px
+		.col_phone,
+		.col_nav
+			width: calc(28% - 10px)
+		.col_logo
+			width: calc(44% - 10px)
+		.header-phone
+			padding-top: 6px
+		.header-logo
+			img
+				max-height: 32px
+		.top-links 
 			li
-				padding-top: 9px
-				padding-left: 17px
-	.nav-btn
-		top: 9px
-	.header-logo
-		img
-			max-height: 38px
-
+				padding-top: 6px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

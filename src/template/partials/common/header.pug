@@ -24,19 +24,19 @@ header.page-header
                                     #cart.header-cart
                                         a(href="ordering.html")
                                             span.icon.icon-cart
-                                        span.top-links__title.hidden-992 Ваша корзина
-                                        button.dropdown-toggle.hidden-992(type="button" data-toggle="dropdown" data-loading-text="Загрузка...")
+                                        span.top-links__title.hidden-1200 Ваша корзина
+                                        button.dropdown-toggle.hidden-1200(type="button" data-toggle="dropdown" data-loading-text="Загрузка...")
                                             span#cart-total 0 товаров
                                 li
                                     .header-user
                                         a(href="account.html")
                                             span.icon.icon-user
-                                        span.top-links__title.hidden-992 Личный кабинет
-                                        a.top-link.hidden-992(href="sign_in.html") Войти 
-                                        span.hidden-992 /
+                                        span.top-links__title.hidden-1200 Личный кабинет
+                                        a.top-link.hidden-1200(href="sign_in.html") Войти 
+                                        span.hidden-1200 /
                                         |
                                         |
-                                        a.top-link.hidden-992(href="sign_in.html") Зарегистрироваться
+                                        a.top-link.hidden-1200(href="sign_in.html") Зарегистрироваться
     .bottom-header.black-theme
         .page-wrapper
             nav#main-menu.header-menu.nav-collapse
@@ -47,7 +47,7 @@ header.page-header
                             if menu_item.title !== "Каталог товаров"
                                 a.color-white(href=menu_item.url) #{menu_item.title}
                             else
-                                a.js-menu-level1.color-white(href=menu_item.url) #[span(class="icon icon-arrow--right" style={"display":"none"})] #{menu_item.title}
+                                a.color-white(href=menu_item.url) #{menu_item.title}
                                 nav.sub-menu.black-theme
                                     ul.sub-menu__list
                                         li.sub-menu__item(onclick="void(0);")
