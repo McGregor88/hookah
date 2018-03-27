@@ -1,0 +1,36 @@
+/**
+ * Articles styles
+ */
+
+.s-articles
+    padding-top: 80px
+    padding-bottom: 120px
+    .articles-list
+        margin-left: -10px
+        margin-right: -10px 
+        margin-bottom: 30px
+    .articles-list-item
+        position: relative
+        width: calc(33.33% - 20px)
+        margin-left: 10px
+        margin-right: 10px
+        margin-bottom: 20px
+        transition: background-color .25s ease
+        &__link
+            display: block
+            padding-left: 130px
+            padding-right: 15px
+            border: 1px solid #f3f3f3
+        &__wrapper
+            display: table
+            height: 155px
+        &__title
+            display: table-cell
+            vertical-align: middle
+            font-size: 22px
+            color: #4f4f4f
+            line-height: 1.2em
+        &:hover
+            background: #f3f3f3
+            .icon::after
+                opacity: 1

@@ -14,15 +14,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	.page-footer
-		.col_1-4
+	.s-articles
+		.articles-list-item
 			width: calc(50% - 20px)
-			margin-bottom: 20px
-		.col_1-2
-			width: calc(100% - 20px)
-	.footer-contacts
-		padding-left: 0
-		text-align: center
 
 /* Medium Devices */
 @media only screen and (max-width : 1024px)
@@ -46,12 +40,14 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	.page-footer
-		.col_1-4
-			width: calc(100% - 20px)
-			text-align: center
-	.footer-menu .nav-footer
-		padding-left: 0
+	.s-articles
+		.articles-list
+			margin-left: 0
+			margin-right: 0
+		.articles-list-item
+			width: 100%
+			margin-left: 0
+			margin-right: 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 640px)
@@ -63,31 +59,35 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	.page-footer
-		.row
-			margin: 0
-		.col_1-4,
-		.col_1-2
-			width: 100%
-			margin-left: 0
-			margin-right: 0
-	
-	.footer-categories .list-group-item a
-		line-height: 30px
-	.footer-menu li
-		line-height: 30px
-		font-size: 20px
-	.footer-contacts
-		.search
-			.form-control
-				font-size: 14px
-	.footer-phone a
-		font-size: 30px
+	.s-articles
+		padding-top: 40px
+		padding-bottom: 60px
+		.articles-list
+			margin-bottom: 20px
+		.articles-list-item
+			margin-bottom: 10px
+			&__link
+				padding-right: 10px
+			&__title
+				font-size: 18px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 400px)
-	.footer-contacts
-		.btn.btn-md
+	.icon.icon-article
+		width: 38px
+		height: 46px
+		left: 20px
+		margin-top: -23px
+		background-position: -58px -112px
+		&::after
+			background-position: 0px -112px
+	.s-articles
+		.articles-list-item
+			&__link
+				padding-left: 80px
+			&__wrapper
+				height: 125px
+		.btn.btn-lg
 			width: 100%
 
 

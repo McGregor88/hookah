@@ -1,0 +1,39 @@
+//- Variables
+- var header_menu_active = "Полезные статьи";
+
+//- Data
+include ../data/articles
+
+doctype html
+html(lang="ru")
+	head
+		include ../partials/common/head.pug
+	body
+		include ../partials/common/header.pug
+
+		#information-information
+			.page-heading.gray-theme
+				.container_fix.text-center
+					ul.breadcrumb
+						li: a(href=base_url) #{home_title}
+						li: span #{header_menu_active}
+					h1.color-black #{header_menu_active}
+			//- Content
+			#content.promotions_content
+				section.s-articles
+					.container_fix
+						ul.articles-list.wrapper
+							each article in articles
+								li.articles-list-item
+									a.articles-list-item__link(href="article")
+										span.icon.icon-article
+										.articles-list-item__wrapper
+											span.articles-list-item__title.bolder #{article}
+						.text-center
+							button.btn.btn-lg.btn-primary(type="button") Показать еще статьи
+
+		//- Features
+		include ../partials/s-features.pug
+
+		include ../partials/common/footer.pug			
+		include ../partials/common/js.pug
