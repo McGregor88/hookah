@@ -1,3 +1,68 @@
 /**
  * Delivery styles
  */
+
+.s-delivery
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    .delivery-list
+        padding-top: 48px
+        padding-bottom: 44px
+    .delivery-item
+        position: relative
+        &:first-child,
+        &:last-child
+            width: 203px
+        &:nth-child(2)
+            width: calc(100% - 406px)
+            &::before,
+            &::after
+                position: absolute
+                content: ""
+                top: 0
+                width: 2px
+                height: 100%
+                background: #fff
+            &::before
+                left: 0
+            &::after
+                right: 0
+        &:last-child
+            .delivery-item__description
+                padding-left: 15%
+                padding-right: 15%
+        &__title
+            display: block
+            margin-top: -10px
+            font-size: 36px
+        &__description
+            font-size: 14px
+            line-height: 1.3em
+            padding-left: 18%
+            padding-right: 18%
+
+.delivery_content
+    .payment-list
+        margin: 27px -4px
+    .payment-item
+        margin: 0 4px
+        padding-top: 23px
+        padding-bottom: 37px
+        width: calc(33.33% - 8px)
+        cursor: default
+        background: #f3f3f3
+        transition: background-color .25s ease, color .25s ease
+        &:hover
+            background: $accent
+            color: #fff
+        &__title
+            margin-bottom: 7px
+            font-size: 50px
+            span
+                font-size: 24px
+                text-transform: lowercase
+        &__description
+            font-size: 14px
+            line-height: 1.3em
+            margin-bottom: 0
