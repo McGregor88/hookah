@@ -1,0 +1,28 @@
+//- Variables
+- var header_menu_active = "Отзывы клиентов";
+//- Data
+include ../data/reviews_list
+
+doctype html
+html(lang="ru")
+	head
+		include ../partials/common/head.pug
+	body
+		include ../partials/common/header.pug
+
+		#information-information
+			.page-heading.gray-theme
+				.container_fix.text-center
+					ul.breadcrumb
+						li: a(href=base_url) #{home_title}
+						li: span #{header_menu_active}
+					h1.color-black #{header_menu_active}
+			//- Content
+			#content.reviews_content
+				section.s-reviews
+
+		//- Features
+		include ../partials/s-features.pug
+
+		include ../partials/common/footer.pug			
+		include ../partials/common/js.pug

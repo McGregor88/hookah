@@ -2,7 +2,17 @@
 
 /* Laptop large */
 @media only screen and (max-width : 1440px)
-	/**/
+	header
+		.header-menu
+			ul
+				display: table
+				width: 100%
+				table-layout: auto
+			.nav__item
+				display: table-cell
+				vertical-align: middle
+				a
+					padding: 0 28px
 
 /* Laptop */
 @media only screen and (max-width : 1366px)
@@ -16,10 +26,6 @@
 			text-align: right
 			li
 				text-align: left
-		.header-menu
-			.nav__item
-				a
-					padding: 0 30px
 
 /* Laptop xs */
 @media only screen and (max-width : 1319px)
@@ -63,7 +69,8 @@
 			padding-bottom: 10px
 			z-index: 100
 		.header-menu
-			> ul
+			ul
+				display: block
 				li
 					display: block
 					padding-left: 0
@@ -73,6 +80,7 @@
 					&:last-child
 						border-bottom: none
 			.nav__item
+				display: block
 				> a
 					line-height: 1em
 					padding: 20px 10px

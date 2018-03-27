@@ -27,6 +27,6 @@ mixin product(obj)
 						span.price-new.bold #{obj.price}
 						span.price-old #{obj.priceOld}
 				else
-					p.price #{obj.price}
+					p.price.bold #{obj.price}
 			button.btn.btn-lg.btn-primary(type="button" onclick="cart.add('1');")
 				span #{obj.btn}
