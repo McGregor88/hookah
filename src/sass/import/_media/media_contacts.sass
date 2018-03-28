@@ -6,7 +6,9 @@
 
 /* Laptop */
 @media only screen and (max-width : 1366px)
-	/**/
+	.contacts__inner
+		padding-left: 20px
+		padding-right: 20px
 
 /* Laptop small */
 @media only screen and (max-width : 1299px)
@@ -14,7 +16,14 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.contacts__inner
+		padding-left: 0
+		padding-right: 0
+	.contacts__left
+		padding-top: 0
+		margin-right: 50px
+	.contacts__right
+		width: calc(100% - 457px)
 
 /* Medium Devices */
 @media only screen and (max-width : 1024px)
@@ -22,7 +31,14 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.contacts
+		&__left,
+		&__right
+			width: 100%
+		&__left
+			margin-right: 0
+			margin-bottom: 80px
+			text-align: center
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 960px)
@@ -38,7 +54,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	.contacts-form__inner
+		.col_1-2
+			width: calc(100% - 20px)
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 640px)
@@ -50,11 +68,47 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.s-contacts
+		padding: 40px 0
+	.contacts__left
+		margin-bottom: 40px
+		p
+			font-size: 20px
+		hr
+			margin-top: 45px
+			margin-bottom: 42px
+	.contacts__phone
+		font-size: 36px
+		margin-bottom: 0
+	.contact-head
+		padding-top: 27px
+		padding-left: 10px
+		padding-right: 10px
+		padding-bottom: 26px
+	.contacts-form
+		padding:
+			top: 20px
+			left: 20px
+			right: 20px
+			bottom: 30px
+		.consent
+			margin-bottom: 20px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 400px)
-	/**/
+	.contacts__phone
+		font-size: 32px
+	.contacts__left,
+	.contacts-form
+		.btn
+			width: 100%
+	.contact-head
+		padding-top: 22px
+		padding-bottom: 21px
+	.contacts-form
+		padding-left: 10px
+		padding-right: 10px
+	
 
 
 /* Custom, iPhone Retina */

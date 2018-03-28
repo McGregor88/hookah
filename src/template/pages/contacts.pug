@@ -8,7 +8,7 @@ html(lang="ru")
 	body
 		include ../partials/common/header.pug
 
-		#information-information
+		#information-contacts
 			.page-heading.gray-theme
 				.container_fix.text-center
 					ul.breadcrumb
@@ -18,9 +18,39 @@ html(lang="ru")
 			//- Content
 			#content.contacts_content
 				section.s-contacts
+					.container_fix
+						.contacts__inner
+							.wrapper
+								.contacts__left
+									p Звоните по телефону
+									.contacts__phone
+										a.bold(href="tel:79251000399") +7 (925) 100-03-99
+									span Звонки принимаем круглосуточно
+									hr
+									p Закажите обратный звонок
+									a.btn.btn-md.btn-primary(href="javascript:void(0);" data-fancybox="" data-src="#callback") Заказать обратный звонок
+								.contacts__right
+									.contact-head.gray-theme
+										h3.text-center Есть вопросы, пишите нам на почту
+									form.contacts-form(action="" method="post" enctype="multipart/form-data")
+										.contacts-form__inner.text-center
+											.fieldset
+												.row
+													.col_1-2
+														.form-field.required
+															input#input-name.form-control(type="text" name="name" value="" placeholder="Имя" required="")/
+													.col_1-2
+														.form-field.required
+															input#input-email.form-control(type="email" name="name" value="" placeholder="E-mail" required="")/
+												.form-field.required
+													textarea#input-enquiry.form-control(name="enquiry" minlength="10" placeholder="Сообщение" required="")
+											.consent
+												span Нажимая кнопку, Вы соглашаетесь с #[a(href="javascript:void(0);") условиями] по обработке Ваших персональных данных
+											.form-buttons
+												input.btn.btn-lg.btn-primary(type="submit" value="Отправить сообщение")/
 
 		//- Features
 		include ../partials/s-features.pug
 
-		include ../partials/common/footer.pug			
+		include ../partials/common/footer.pug
 		include ../partials/common/js.pug
