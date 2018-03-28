@@ -20,6 +20,40 @@ html(lang="ru")
 			//- Content
 			#content.reviews_content
 				section.s-reviews
+					.container-sm
+						ul.reviews-list
+							each review in reviews
+								li.reviews-list-item
+									span.icon.icon-feedback
+									.row
+										.col_1-2
+											h5.reviews-list-item__name.bold #{review.name}
+										.col_1-2.text-right
+											span.reviews-list-item__date
+												time #{review.time}
+									p.reviews-list-item__text #{review.text}
+						.reviews-buttons
+							.row
+								.col_1-2
+									a.btn.btn-lg.btn-primary(href="javascript:void(0);") Отправить отзыв
+								.col_1-2.text-right
+									//- Pagination
+									include ../partials/components/pagination.pug
+					.section-heading.gray-theme.text-center
+						.container_fix
+							h2.color-black Оставить отзыв
+					.container-sm
+						form.reviews-form#reviews_form
+							.reviews-form__inner.text-center
+								.fieldset
+									.form-field
+										input.form-control(type="text" name="name" placeholder="Имя" required="")/
+									.form-field
+										textarea.form-control(placeholder="Отзыв" minlength="10" required="")
+								.consent
+									span Нажимая кнопку, Вы соглашаетесь с #[a(href="javascript:void(0);") условиями] по обработке Ваших персональных данных
+								.form-button
+									button.btn.btn-lg.btn-primary(type="submit") Отправить отзыв
 
 		//- Features
 		include ../partials/s-features.pug

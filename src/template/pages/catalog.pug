@@ -351,29 +351,10 @@ html(lang="ru")
 									.catalog-buttons
 										.row
 											.col_1-2
-												button.btn.btn-lg.btn-primary Показать еще
+												button.btn.btn-lg.btn-primary(type="button") Показать еще
 											.col_1-2.text-right
 												//- Pagination
-												#pagination
-													ul.pagination.text-center
-														li.pag-btn.text-left
-															a(href="javascript:void(0);")
-																span.icon.icon-pag--first
-														li.pag-btn.text-left
-															a(href="javascript:void(0);")
-																span.icon.icon-pag--prev
-														li.active
-															span 1
-														li
-															a(href="javascript:void(0);") 2
-														li
-															a(href="javascript:void(0);") 3
-														li.pag-btn.text-right
-															a(href="javascript:void(0);")
-																span.icon.icon-pag--next
-														li.pag-btn.text-right
-															a(href="javascript:void(0);")
-																span.icon.icon-pag--last
+												include ../partials/components/pagination.pug
 
 		//- Features
 		include ../partials/s-features.pug
