@@ -1,0 +1,68 @@
+/**
+ * Table styles
+ */
+/* Orders table */
+
+.products-table
+	.table>thead>tr>th
+		vertical-align: middle
+		padding: 0
+		font-size: 22px
+		font-family: $medium
+		line-height: 67px
+		color: #4f4f4f
+		border: none
+		background: #efefef
+	.table>tbody>tr>td
+		padding: 20px 0
+		border-bottom: 1px solid #efefef
+		vertical-align: inherit
+		border-top: none
+	.table>tbody>tr
+		&:last-child
+			> td
+				border: none
+	.table
+		thead
+			th.products-table__photo
+				padding-left: 22px
+	&__photo
+		width: 179px
+	&__name
+		width: 491px
+	&__price
+		width: 187px
+	&__quantity
+		width: 246px
+	&__sum
+		width: 177px
+	&__button
+		width: 40px
+
+	td.products-table
+		&__photo
+			.img-thumbnail
+				display: block
+				padding: 22px 0
+				width: 124px
+				height: 124px
+				border-color: #efefef
+				border-radius: 0
+				transition: border-color .25s ease
+				img
+					max-height: 100%
+					margin-left: auto
+					margin-right: auto
+				&:hover
+					border-color: $accent
+		&__name
+			padding-right: 75px
+		&__price,
+		&__sum
+			font-size: 24px
+		&__quantity
+			.form-field
+				margin-bottom: 0
+		&__button
+			.icon:hover::after
+				opacity: 1

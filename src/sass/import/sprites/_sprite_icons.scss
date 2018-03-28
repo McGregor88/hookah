@@ -1,0 +1,126 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-cart-hover {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: 0px 0px;
+  width: 23px;
+  height: 20px;
+}
+.icon-cart {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -43px 0px;
+  width: 23px;
+  height: 20px;
+}
+.icon-close--hover {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -76px -80px;
+  width: 18px;
+  height: 18px;
+}
+.icon-close-xs--hover {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -103px -118px;
+  width: 15px;
+  height: 15px;
+}
+.icon-close-xs {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -163px 0px;
+  width: 15px;
+  height: 15px;
+}
+.icon-close {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -38px -80px;
+  width: 18px;
+  height: 18px;
+}
+.icon-date-hover {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: 0px -80px;
+  width: 18px;
+  height: 18px;
+}
+.icon-date {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -125px 0px;
+  width: 18px;
+  height: 18px;
+}
+.icon-lock-hover {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: 0px -118px;
+  width: 14px;
+  height: 20px;
+}
+.icon-lock {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -34px -118px;
+  width: 14px;
+  height: 20px;
+}
+.icon-phone-hover {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -86px 0px;
+  width: 19px;
+  height: 20px;
+}
+.icon-phone {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -39px -40px;
+  width: 19px;
+  height: 20px;
+}
+.icon-search-hover {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -163px -35px;
+  width: 15px;
+  height: 15px;
+}
+.icon-search {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -68px -118px;
+  width: 15px;
+  height: 15px;
+}
+.icon-unlock-hover {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -125px -78px;
+  width: 15px;
+  height: 20px;
+}
+.icon-unlock {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -125px -38px;
+  width: 15px;
+  height: 20px;
+}
+.icon-user-hover {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: 0px -40px;
+  width: 19px;
+  height: 20px;
+}
+.icon-user {
+  background-image: url(../img/icons/sprite_icons.png);
+  background-position: -86px -40px;
+  width: 19px;
+  height: 20px;
+}

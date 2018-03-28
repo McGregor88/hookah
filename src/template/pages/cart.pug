@@ -1,0 +1,145 @@
+//- Variables
+- var header_menu_active = "";
+- var pagetitle = "Ваша корзина";
+
+doctype html
+html(lang="ru")
+	head
+		include ../partials/common/head.pug
+	body
+		include ../partials/common/header.pug
+
+		#checkout-cart
+			.page-heading.gray-theme
+				.container_fix.text-center
+					ul.breadcrumb
+						li: a(href=base_url) #{home_title}
+						li: span #{pagetitle}
+					h1.color-black #{pagetitle}
+			//- Content
+			#content.checkout-cart_content
+				section.s-cart
+					.container_fix
+						form(action="" method="post" enctype="multipart/form-data")
+							.products-table
+								.table-responsive
+									table.table
+										thead
+											tr
+												th.products-table__photo Фото
+												th.products-table__name Наименование
+												th.products-table__price Цена
+												th.products-table__quantity Количество
+												th.products-table__sum Сумма
+												th.products-table__button
+										tbody
+											tr
+												td.products-table__photo
+													a(href="product.html")
+														.img-thumbnail: img.img-responsive(src="src/image/products/hit/product_1.jpg" alt="табак")/
+												td.products-table__name
+													a.color-black(href="product.html") Табак для кальяна Al Fakher современный 
+												td.products-table__price.bold.color-black 49 р.
+												td.products-table__quantity
+													.quantity.text-left
+														.form-field
+															input.form-control(type="number" name="quantity[]" min="1" max="999" step="1" value="1" size="1")/
+												td.products-table__sum.bold.color-black  49 р.
+												td.products-table__button
+													button(type="button" data-toggle="tooltip" title="" onclick="cart.remove('');" data-original-title="Удалить")
+														span.icon.icon-close
+											tr
+												td.products-table__photo
+													a(href="product.html")
+														.img-thumbnail: img.img-responsive(src="src/image/products/hit/product_4.jpg" alt="табак")/
+												td.products-table__name
+													a.color-black(href="product.html") Табак для кальяна Al Fakher апельсиновый запах 
+												td.products-table__price.bold.color-black 147 р.
+												td.products-table__quantity
+													.quantity.text-left
+														.form-field
+															input.form-control(type="number" name="quantity[]" min="1" max="999" step="1" value="1" size="1")/
+												td.products-table__sum.bold.color-black  147 р.
+												td.products-table__button
+													button(type="button" data-toggle="tooltip" title="" onclick="cart.remove('');" data-original-title="Удалить")
+														span.icon.icon-close
+											tr
+												td.products-table__photo
+													a(href="product.html")
+														.img-thumbnail: img.img-responsive(src="src/image/products/sale/product_1.jpg" alt="табак")/
+												td.products-table__name
+													a.color-black(href="product.html") Набор для кальяна Al Fakher огромный и классный очень популярный
+
+												td.products-table__price.bold.color-black 7 100 р.
+												td.products-table__quantity
+													.quantity.text-left
+														.form-field
+															input.form-control(type="number" name="quantity[]" min="1" max="999" step="1" value="2" size="1")/
+												td.products-table__sum.bold.color-black  14 200 р.
+												td.products-table__button
+													button(type="button" data-toggle="tooltip" title="" onclick="cart.remove('');" data-original-title="Удалить")
+														span.icon.icon-close
+
+						.cart-total.text-right
+							table.table.table-bordered
+								tbody
+									tr
+										td.text-right
+											strong Сумма:
+										td.text-right $101.00
+									tr
+										td.text-right
+											strong Eco Tax (-2.00)
+										td.text-right $2.00
+									tr
+										td.text-right
+											strong Итого:
+										td.text-right $123.20
+						.cart-buttons
+							.row
+								.col_1-2
+									a.btn.btn-default(href=base_url) Продолжить покупки
+								.col_1-2.text-right
+									a.btn.btn-primary(href="checkout.html") Оформленить заказ
+
+				//- Related products
+				include ../partials/related_products.pug
+
+		//- Features
+		include ../partials/s-features.pug
+
+		include ../partials/common/footer.pug			
+		include ../partials/common/js.pug
+
+		script.
+			var productsSwiper = new Swiper('.products-swiper-container', {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				slidesPerGroup: 4,
+				loop: true,
+				loopFillGroupWithBlank: true,
+				speed: 700,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				},
+				breakpoints: {
+					1200: {
+						slidesPerView: 3,
+						slidesPerGroup: 3,
+					},
+					992: {
+						slidesPerView: 2,
+						slidesPerGroup: 2,						
+					},
+					768: {
+						slidesPerView: 2,
+						slidesPerGroup: 2,
+						spaceBetween: 10,
+					},
+					480: {
+						slidesPerView: 1,
+						slidesPerGroup: 1,
+					}
+				}
+			});
