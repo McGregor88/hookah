@@ -91,9 +91,22 @@
 				&__price
 					font-size: 18px
 
+
+	.checkout-table
+		.table
+			td.products-table__photo .img-thumbnail
+				padding: 22px 0
+				width: 124px
+				height: 124px
+			td.products-table__info
+				padding-right: 40px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 640px)
-	/**/
+	.checkout-table
+		.table
+			td.products-table__info
+				padding-right: 20px
 
 /* HTC One */
 @media only screen and (max-width : 540px)
@@ -122,6 +135,24 @@
 					&:last-child
 						font-size: 30px
 
+	.checkout-table
+		.table-responsive>.table>tbody>tr>td
+			white-space: nowrap !important
+
+	.checkout-table-head
+		padding-top: 24px
+		padding-bottom: 23px
+		padding-left: 20px
+		padding-right: 20px
+		text-align: center
+		h2
+			font-size: 20px
+
+	.checkout-total-table
+		.table>tbody>tr>td
+			&:last-child
+				font-size: 30px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 400px)
 	.cart-total-table
@@ -130,6 +161,15 @@
 				width: 50%
 			&:last-child
 				width: 50%
+
+	.checkout-total-table
+		.table>tbody>tr>td
+			&:first-child
+				span
+					font-size: 12px
+			&:last-child
+				font-size: 26px
+
 
 
 /* Custom, iPhone Retina */

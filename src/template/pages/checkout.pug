@@ -1,0 +1,197 @@
+//- Variables
+- var header_menu_active = "";
+- var pagetitle = "Оформление заказа";
+
+doctype html
+html(lang="ru")
+	head
+		include ../partials/common/head.pug
+	body
+		include ../partials/common/header.pug
+
+		#checkout-checkout
+			.page-heading.gray-theme
+				.container_fix.text-center
+					ul.breadcrumb
+						li: a(href=base_url) #{home_title}
+						li: a(href="cart.html") Ваша корзина
+						li: span #{pagetitle}
+					h1.color-black #{pagetitle}
+			//- Content
+			#content.checkout_content
+				section.s-checkout
+					.container_fix
+						.row
+							.col_1-2
+								.panel-head.gray-theme
+									h4 Информация о покупателе
+								.panel-body
+									.fieldset
+										.row
+											.col_1-2
+												.form-field.required
+													input.form-control#input-payment-firstname(type="text" name="firstname" value="" placeholder="Имя")/
+											.col_1-2
+												.form-field.required
+													input.form-control#input-payment-telephone(type="tel" name="telephone" value="" placeholder="Телефон")/
+								.panel-head.gray-theme
+									h4 Информация о доставке
+								.panel-body
+									.fieldset
+										.row
+											.col_1-2
+												.form-field.required
+													input.form-control#input-payment-city(type="text" name="city" value="" placeholder="Город")/
+											.col_1-2
+												.select-box
+													.select-control
+														- var options = ["Московская область", "Смоленская область", "Калужская область", "Брянская область"];
+														select#select-region.select
+															each item in options
+																option #{item}
+											.col
+												.form-field.required
+													input.form-control#input-payment-address(type="text" name="address" value="" placeholder="Адрес")/
+											.col_1-2
+												.form-field.required
+													.input-group.date
+														input.form-control#input-option(type="text" name="option" value="" data-date-format="DD-MM-YYYY" placeholder="Дата доставки	")/
+														span.input-group-btn
+															button.btn.btn-default(type="button")
+																span.icon.icon-date.relative.opacity-transition
+											.col_1-2
+												.select-box.with-label
+													label.control-label(for="select-time") Время доставки
+													.select-control
+														- var options = ["с 09:00 до 13:00", "с 14:00 до 17:00", "с 18:00 до 22:00"];
+														select#select-time.select
+															each item in options
+																option #{item}
+								.panel-head.gray-theme
+									h4 Способ доставки
+								.panel-body
+									.fieldset
+										.row
+											.col_1-2
+												.select-box
+													.select-control
+														- var options = ["Курьером", "Самовывоз", "Почтой"];
+														select#select-delivery-method.select
+															each item in options
+																option #{item}
+											.col_1-2
+												.delivery-method-info
+													span.delivery-method-info__caption Стоимость доставки курьером
+													span.delivery-method-info__price.bold.color-black 300 р.
+							.col_1-2
+								.checkout-table-head.black-theme
+									h2.color-white В вашей корзине #[span(class="color-gray") 3 товара]
+								.products-table.checkout-table
+									.table-responsive
+										table.table
+											tbody
+												tr
+													td.products-table__photo
+														a(href="product.html")
+															.img-thumbnail: img.img-responsive(src="src/image/products/hit/product_1.jpg" alt="табак")/
+													td.products-table__info
+														.products-table__info__wrapper.relative
+															a.products-table__info__name.color-black(href="product.html") Табак для кальяна Al Fakher современный 
+															span.products-table__info__availability Есть в наличии
+															.quantity.text-left
+																.form-field
+																	input.form-control(type="number" name="quantity[]" min="1" max="999" step="1" value="1" size="1")/
+																span.products-table__info__price.bold.color-black 147 р.
+													td.products-table__button
+														button(type="button" data-toggle="tooltip" title="" onclick="cart.remove('');" data-original-title="Удалить")
+															span.icon.icon-close.relative.opacity-transition
+												tr
+													td.products-table__photo
+														a(href="product.html")
+															.img-thumbnail: img.img-responsive(src="src/image/products/sale/product_1.jpg" alt="табак")/
+													td.products-table__info
+														.products-table__info__wrapper.relative
+															a.products-table__info__name.color-black(href="product.html") Набор для кальяна Al Fakher апельсиновый запах очень популярный
+															span.products-table__info__availability Есть в наличии
+															.quantity.text-left
+																.form-field
+																	input.form-control(type="number" name="quantity[]" min="1" max="999" step="1" value="1" size="1")/
+																span.products-table__info__price.bold.color-black 5 147 р.
+													td.products-table__button
+														button(type="button" data-toggle="tooltip" title="" onclick="cart.remove('');" data-original-title="Удалить")
+															span.icon.icon-close.relative.opacity-transition
+												tr
+													td.products-table__photo
+														a(href="product.html")
+															.img-thumbnail: img.img-responsive(src="src/image/products/hit/product_4.jpg" alt="табак")/
+													td.products-table__info
+														.products-table__info__wrapper.relative
+															a.products-table__info__name.color-black(href="product.html") Табак для кальяна Al Fakher апельсиновый запах
+															span.products-table__info__availability Есть в наличии
+															.quantity.text-left
+																.form-field
+																	input.form-control(type="number" name="quantity[]" min="1" max="999" step="1" value="1" size="1")/
+																span.products-table__info__price.bold.color-black 47 р.
+													td.products-table__button
+														button(type="button" data-toggle="tooltip" title="" onclick="cart.remove('');" data-original-title="Удалить")
+															span.icon.icon-close.relative.opacity-transition
+								.checkout-total.text-left
+									.checkout-total-table
+										table.table
+											tbody
+												tr
+													td
+														h4 Всего
+														span (без учета стоимости доставки)
+													td 5 341 р.
+
+						.checkout-buttons
+							.row
+								.col_1-2
+									a.btn.btn-lg.btn-dark(href="cart.html") #[span(class="icon icon-back")] Вернуться в корзину
+								.col_1-2.relative.text-right
+									.consent.text-left
+										.consent__wrapper
+											span Нажимая кнопку, Вы соглашаетесь с #[a(href="javascript:void(0);") условиями] по обработке Ваших персональных данных
+									a#button-confirm.btn.btn-lg.btn-primary(href="order_is_processed.html" data-loading-text="Загрузка...") Оформить заказ
+
+				//- Related products
+				include ../partials/related_products.pug
+		//- Features
+		include ../partials/s-features.pug
+
+		include ../partials/common/footer.pug			
+		include ../partials/common/js.pug
+
+		script.
+			var productsSwiper = new Swiper('.products-swiper-container', {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				slidesPerGroup: 4,
+				loop: true,
+				loopFillGroupWithBlank: true,
+				speed: 700,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				},
+				breakpoints: {
+					1200: {
+						slidesPerView: 3,
+						slidesPerGroup: 3,
+					},
+					992: {
+						slidesPerView: 2,
+						slidesPerGroup: 2,						
+					},
+					768: {
+						slidesPerView: 2,
+						slidesPerGroup: 2,
+						spaceBetween: 10,
+					},
+					480: {
+						slidesPerView: 1,
+						slidesPerGroup: 1,
+					}
+				}
+			});

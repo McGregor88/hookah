@@ -234,6 +234,7 @@ input[type=radio]
 				opacity: 1
 
 /*	Select	*/
+
 .select2,
 .select2-selection
 	outline: none
@@ -254,35 +255,32 @@ input[type=radio]
 			b
 				border-style: none
 				left: 0
-				margin-top: -4px
-				width: 14px
-				height: 8px
+				margin-top: -3.5px
+				width: 11px
+				height: 7px
 				margin-left: 0
-				background: url("../img/select-down.png") no-repeat center center
+				background-image: url("../image/icons/sprite_arrows.png")
+				background-position: -147px -98px
+				transition: transform .5s ease
 	.select2-results>.select2-results__options
 		max-height: 400px
-		padding-left: 12px
-		padding-right: 12px
+		padding-left: 20px
+		padding-right: 20px
+		border: 1px solid #ebebeb
 		box-shadow: 0 0 40px rgb(238, 238, 238)
+		border-radius: 4px
+		font-family: $medium
+		color: #4f4f4f
 	.select2-results__option[aria-disabled=true]
 		display: none
 	.select2-results__option--highlighted[aria-selected]
 		position: relative
 		background-color: #fff
-		color: #313131
+		color: $accent
 		z-index: 10
 		&:hover,
 		&:focus
-	  		color: #fff
-		&:hover::after
-			position: absolute
-			content: ""
-			top: 0
-			left: -12px
-			width: calc(100% + 23px)
-			height: 100%
-			background-color: $accent
-			z-index: -1
+	  		color: $accent
 	.select2-results__option[aria-selected=true]
 		background-color: #fff
 		color: $accent
@@ -300,10 +298,16 @@ input[type=radio]
 	.select2-selection--singl
 		border-bottom: 1px solid #fff
 
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single
+	border-bottom-left-radius: 4px
+	border-bottom-right-radius: 4px
+
 .select2-container--default.select2-container--open
 	.select2-selection--single
 		.select2-selection__rendered
 			color: $accent
+		.select2-selection__arrow b
+			    transform: rotate(180deg)
 
 .select2-dropdown
 	background-color: #fff
@@ -312,49 +316,84 @@ input[type=radio]
 
 .select2-results__option
 	padding: 0
-	padding-top: 12px
-	padding-bottom: 12px
+	padding-top: 8px
+	padding-bottom: 8px
 	border-bottom: 1px solid #ebebeb
 	&:last-child
 		border-bottom: none
 
 .select2-container
-	margin-top: 5px
+	margin-top: 2px
 
-/*	Select ordering	*/
+/*	Select box	*/
 .select-box
 	font-size: 0
-	margin-bottom: 16px
-	.label-caption
-		width: 102px
+	margin-bottom: 20px
+	.control-label
+		width: 70px
 		vertical-align: middle
+		font-size: 16px
 		line-height: 1.2em
-		margin-right: 16px
+		margin-right: 22px
 		margin-bottom: 0
 	.select-control
 		display: inline-block
-		width: calc(100% - 118px)
+		width: 100%
+	&.with-label
+		.select-control
+			width: calc(100% - 92px)
 	.select2-container
 		margin-top: 0
 		.select2-selection--single
-			height: 47px
+			height: 50px
 			border: 1px solid #ebebeb
-			font-size: 14px
+			font-size: 16px
+			font-family: $medium
+			transition: border-color .25s ease
+			&:hover
+				border-color: #d7d7d7
 			.select2-selection__rendered
-				padding-left: 15px
-				line-height: 45px
-				color: #c2c2c2
+				padding-left: 22px
+				padding-right: 35px
+				line-height: 48px
+				color: #a9a9a9
 	.select2-container--default
 		.select2-selection--single
 			.select2-selection__arrow
-				width: 45px
+				width: 47px
 				right: 0
-				background-color: #ebebeb
+				background-color: transparent
 				border-top-right-radius: 4px
 				border-bottom-right-radius: 4px
 				b
 					left: 50%
-					margin-left: -7px
+					margin-left: -5.5px
+
+/*	Dateinput	*/
+
+.form-field
+	.input-group.date
+		.form-control
+			border-right: none
+		.btn
+			padding: 14px 13px
+		.btn-default
+			border-left: none
+			border-color: #ebebeb
+			transition: border-color .25s ease
+			&:hover,
+			&:focus,
+			&:active
+				border-color: #ebebeb
+				background-color: #fff
+				.icon::after
+					opacity: 1
+		&:hover,
+		&:focus
+			.btn-default,
+			.form-control
+				border-color: #d7d7d7
+
 
 /*	Radio	*/
 .radio-controls

@@ -95,3 +95,66 @@
 				border-top: 1px solid #efefef
 				&:last-child
 					font-size: 36px
+
+/* Checkout-table */
+
+.checkout-table
+	.table>tbody>tr>td
+		padding: 35px 0
+	.table
+		margin-bottom: 35px
+		td.products-table
+			&__photo
+				width: 149px
+				padding-right: 24px
+			&__info
+				width: 449px
+				padding-right: 95px
+			&__button
+				vertical-align: top
+				width: 18px
+		.products-table__info
+			&__wrapper
+				height: 124px
+			&__name
+				display: block
+				margin-bottom: 7px
+				line-height: 1.2em
+			&__availability
+				display: block
+				font-size: 12px
+				color: #4f4f4f
+			.quantity
+				position: absolute
+				bottom: 0
+				left: 0
+				.form-field
+					margin-bottom: 0
+					margin-right: 30px
+			&__price
+				display: inline-block
+				vertical-align: top
+				font-size: 24px
+				line-height: 41px
+
+/* Checkout total table */
+
+.checkout-total-table
+	.table
+		margin-bottom: 0
+	.table>tbody>tr>td
+		padding: 0
+		border: none
+		vertical-align: middle
+		&:first-child
+			color: #4f4f4f
+			h4
+				line-height: 1em
+			span
+				font-family: $medium
+		&:last-child
+			font-size: 36px
+			line-height: 1em
+			font-family: $bold
+			color: #000
+			text-align: right
