@@ -80,27 +80,25 @@ html(lang="ru")
 													button(type="button" data-toggle="tooltip" title="" onclick="cart.remove('');" data-original-title="Удалить")
 														span.icon.icon-close.relative.opacity-transition
 
-						.cart-total.text-right
-							table.table.table-bordered
-								tbody
-									tr
-										td.text-right
-											strong Сумма:
-										td.text-right $101.00
-									tr
-										td.text-right
-											strong Eco Tax (-2.00)
-										td.text-right $2.00
-									tr
-										td.text-right
-											strong Итого:
-										td.text-right $123.20
+						.cart-total.text-left
+							.cart-total-table
+								table.table
+									tbody
+										tr
+											td Сумма
+											td 14 396 р.
+										tr
+											td Доставка
+											td 300 р.
+										tr
+											td
+											td 14 696 р.
 						.cart-buttons
 							.row
 								.col_1-2
-									a.btn.btn-default(href=base_url) Продолжить покупки
+									a.btn.btn-lg.btn-dark(href=base_url) #[span(class="icon icon-back")] Продолжить покупки
 								.col_1-2.text-right
-									a.btn.btn-primary(href="checkout.html") Оформленить заказ
+									a.btn.btn-lg.btn-primary(href="checkout.html") Оформленить заказ
 
 				//- Related products
 				include ../partials/related_products.pug

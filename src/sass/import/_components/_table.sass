@@ -4,6 +4,8 @@
 /* Orders table */
 
 .products-table
+	.table
+		margin-bottom: 25px
 	.table>thead>tr>th
 		vertical-align: middle
 		padding: 0
@@ -18,10 +20,6 @@
 		border-bottom: 1px solid #efefef
 		vertical-align: inherit
 		border-top: none
-	.table>tbody>tr
-		&:last-child
-			> td
-				border: none
 	.table
 		thead
 			th.products-table__photo
@@ -39,30 +37,61 @@
 	&__button
 		width: 40px
 
-	td.products-table
-		&__photo
-			.img-thumbnail
-				display: block
-				padding: 22px 0
-				width: 124px
-				height: 124px
-				border-color: #efefef
-				border-radius: 0
-				transition: border-color .25s ease
-				img
-					max-height: 100%
-					margin-left: auto
-					margin-right: auto
-				&:hover
-					border-color: $accent
-		&__name
-			padding-right: 75px
-		&__price,
-		&__sum
+	.table
+		td.products-table
+			&__photo
+				.img-thumbnail
+					display: block
+					padding: 22px 0
+					width: 124px
+					height: 124px
+					border-color: #efefef
+					border-radius: 0
+					transition: border-color .25s ease
+					img
+						max-height: 100%
+						margin-left: auto
+						margin-right: auto
+					&:hover
+						border-color: $accent
+			&__name
+				padding-right: 75px
+			&__price,
+			&__sum
+				font-size: 24px
+			&__quantity
+				.form-field
+					margin-bottom: 0
+			&__button
+				.icon:hover::after
+					opacity: 1
+
+/* Cart total table */
+
+.cart-total-table
+	.table
+		margin-bottom: 40px
+	.table>tbody>tr>td
+		padding: 0
+		padding-top: 8px
+		padding-bottom: 8px
+		border: none
+		&:first-child
+			width: 246px
+			font-size: 22px
+			font-family: $medium
+			color: #4f4f4f
+		&:last-child
+			width: 217px
 			font-size: 24px
-		&__quantity
-			.form-field
-				margin-bottom: 0
-		&__button
-			.icon:hover::after
-				opacity: 1
+			font-family: $bold
+			color: #000
+	.table>tbody>tr
+		&:nth-last-child(2)
+			td
+				padding-bottom: 15px
+		&:last-child
+			td
+				border-top: 1px solid #efefef
+				&:last-child
+					font-size: 36px
