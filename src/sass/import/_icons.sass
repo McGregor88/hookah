@@ -106,27 +106,22 @@
 	&.icon-search
 		width: 15px
 		height: 15px
-		background-image: url("../image/icons/search.png")
+		background-image: url("../image/icons/sprite_icons.png")
+		background-position: -68px -118px
+		&::after
+			background-image: url("../image/icons/sprite_icons.png")
+			background-position: -163px -35px
 
 	&.icon-pag
 		&--first,
 		&--prev,
 		&--next,
 		&--last
-			position: relative
 			margin-top: 14px
 			height: 12px
 			background-image: url("../image/icons/sprite_pag.png")
 			&::after
-				position: absolute
-				content: ''
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
 				background-image: url(../image/icons/sprite_pag.png)
-				opacity: 0
-				transition: opacity .5s ease
 		&--first,
 		&--last
 			width: 11px
@@ -152,21 +147,12 @@
 
 	&.icon-up,
 	&.icon-down
-		position: relative
 		width: 11px
 		height: 7px
 		margin-top: 7px
 		background-image: url("../image/icons/sprite_arrows.png")
 		&::after
-			position: absolute
-			content: ''
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
 			background-image: url("../image/icons/sprite_arrows.png")
-			opacity: 0
-			transition: opacity .5s ease
 	&.icon-up
 		background-position: -62px -146px
 		&::after
@@ -186,16 +172,8 @@
 		background-image: url("../image/icons/sprite_article.png")
 		background-position: -95px 0px
 		&::after
-			position: absolute
-			content: ''
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
 			background-image: url("../image/icons/sprite_article.png")
 			background-position: 0px 0px
-			opacity: 0
-			transition: opacity .5s ease
 
 	&.icon-feedback
 		position: absolute
@@ -206,21 +184,12 @@
 		background-image: url("../image/icons/feedback.png")
 
 	&.icon-close
-		position: relative
 		vertical-align: middle
 		width: 18px
 		height: 18px
 		background-image: url("../image/icons/sprite_icons.png")
 		background-position: -38px -80px
 		&::after
-			position: absolute
-			content: ''
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
 			background-image: url("../image/icons/sprite_icons.png")
 			background-position: -76px -80px
-			opacity: 0
-			transition: opacity .5s ease
 		
