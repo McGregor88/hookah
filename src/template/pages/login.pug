@@ -1,5 +1,9 @@
 //- Variables
-- var header_menu_active = "Акции и спецпредложения";
+- var header_menu_active = "";
+- var pagetitle = "Авторизация";
+
+//- Mixins
+include ../mixins/checkbox
 
 doctype html
 html(lang="ru")
@@ -8,20 +12,64 @@ html(lang="ru")
 	body
 		include ../partials/common/header.pug
 
-		#information-information
+		#account-login
 			.page-heading.gray-theme
 				.container_fix.text-center
 					ul.breadcrumb
 						li: a(href=base_url) #{home_title}
-						li: span #{header_menu_active}
-					h1.color-black #{header_menu_active}
+						li: a(href="login.html") Вход в личный кабинет
+						li: span #{pagetitle}
+					h1.color-black #{pagetitle}
 			//- Content
-			#content.promotions_content
-
+			#content.login_content
+				section.s-login
+					.container_fix
+						.wrapper
+							.col_new-user
+								.panel-head.gray-theme
+									h4 Новый клиент
+								.form__body
+									form.register__form(action="" method="post" enctype="multipart/form-data")
+										.register__form__inner
+											.fieldset#account
+												.form-field.required
+													input.form-control#input-firstname(type="text" name="firstname" value="" placeholder="Имя" required="")/
+												.form-field.required
+													input.form-control#input-telephone(type="tel" name="telephone" value="" placeholder="Телефон" required="")/
+												.form-field.required
+													input.form-control#input-email(type="email" value="" name="email" placeholder="E-mail" required="")/
+												.form-field.js-lock-field.required
+													input.form-control#input-password(type="password" name="password" value="" placeholder="Пароль" required="")/
+													a.form-field__icon.text-center(href="javascript:void(0);")
+														span.icon.icon-lock.relative.opacity-transition
+											.consent
+												span Нажимая кнопку, Вы соглашаетесь с #[a(href="javascript:void(0);") условиями] по обработке Ваших персональных данных
+											.form-buttons
+												input.btn.btn-lg.btn-primary(type="submit" value="Зарегистрироваться" class="btn btn-primary")/
+							.col_registered-user
+								.panel-head.gray-theme
+									h4 Зарегистрированный пользователь
+								.form__body
+									form.login__form(action="" method="post" enctype="multipart/form-data")
+										.login__form__inner
+											.fieldset.clearfix
+												.form-field
+													input.form-control(type="email" name="email" value="" placeholder="E-mail" required="")/
+												.form-field.js-lock-field
+													input.form-control(type="password" name="password" value="" placeholder="Пароль" required="")/
+													a.form-field__icon.text-center(href="javascript:void(0);")
+														span.icon.icon-lock.relative.opacity-transition
+												a(href="javascript:void(0);" data-fancybox="" data-src="#forgotten") Забыли свой пароль?
+												+checkbox({
+													checked: true,
+													id: "remember",	
+													label: "Запомнить меня"
+												})
+											.form-buttons
+												//-input.btn.btn-lg.btn-primary(type="submit" value="Войти в личный кабинет")/
+												a.btn.btn-lg.btn-primary(href="account.html") Войти в личный кабинет
 		//- Features
 		include ../partials/s-features.pug
-		//- Bottom content
-		include ../partials/bottom_content.pug
 
-		include ../partials/common/footer.pug			
+		include ../partials/common/footer.pug
 		include ../partials/common/js.pug

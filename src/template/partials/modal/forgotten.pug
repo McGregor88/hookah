@@ -1,0 +1,13 @@
+.modal#forgotten.modal-forgotten
+    .modal__head.gray-theme.text-center
+        h3.color-black Восстановление пароля
+    .modal__body.text-center
+        #account-forgotten
+            #content
+                p.color-black Ссылка на восстановление пароля будет выслана на указанную ниже почту
+                form.modal-form#forgotten_form(action="" method="post" enctype="multipart/form-data")
+                    .fieldset
+                        .form-field.required
+                            input.form-control(type="email" name="email" placeholder="E-Mail" required="")/
+                    .form-buttons
+                        input.btn.btn-lg.btn-primary(type="submit" value="Получить ссылку")/

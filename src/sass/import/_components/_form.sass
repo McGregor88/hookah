@@ -41,6 +41,7 @@ input[type=radio]
  */
 
 .form-control
+	font-size: 16px
 	transition: border-color .25s ease
 	&::placeholder
 		color: #a9a9a9
@@ -76,6 +77,16 @@ input[type=radio]
 		box-shadow: none
 		background: #fff
 		resize: unset
+	&__icon
+		position: absolute
+		top: 0
+		right: 0
+		width: 41px
+		height: 100%
+		background: inherit
+		&:hover .icon
+			&::after
+				opacity: 1
 
 /* Quantity */
 .quantity

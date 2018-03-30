@@ -1,0 +1,60 @@
+/**
+ * Login styles
+ */
+.s-login
+    padding-top: 50px
+    padding-bottom: 180px
+    .col_new-user,
+    .col_registered-user
+        position: relative
+        display: inline-block
+        vertical-align: top
+        letter-spacing: 0
+    .col_new-user
+        width: 65%
+        margin-right: 49px
+    .col_registered-user
+        width: calc(35% - 49px)
+        &::after
+            position: absolute
+            content: ""
+            top: 0
+            left: -25px
+            width: 1px
+            background: #efefef
+            height: 100%
+    .panel-head
+        margin-bottom: 20px
+
+.col_new-user
+    .fieldset
+        margin: 0 -9px
+        letter-spacing: -0.4em
+    .form-field
+        display: inline-block
+        vertical-align: top
+        width: calc(50% - 18px)
+        margin-left: 9px
+        margin-right: 9px
+        letter-spacing: 0
+
+.col_registered-user
+    .fieldset
+        margin-bottom: 36px
+        a
+            font-family: $medium
+            color: #777
+            &:hover
+                color: $accent
+    .checkbox-field
+        display: inline-block
+        vertical-align: top
+        padding-top: 5px
+        float: right
+
+.modal-forgotten
+    p
+        margin-bottom: 18px
+        line-height: 1.2em
+    .form-field
+        margin-bottom: 30px
