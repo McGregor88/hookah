@@ -1,5 +1,6 @@
 //- Variables
-- var header_menu_active = "Акции и спецпредложения";
+- var header_menu_active = "";
+- var account_menu_active = "Изменить мои контакты";
 
 doctype html
 html(lang="ru")
@@ -8,15 +9,22 @@ html(lang="ru")
 	body
 		include ../partials/common/header.pug
 
-		#information-information
+		#account-edit
 			.page-heading.gray-theme
 				.container_fix.text-center
 					ul.breadcrumb
 						li: a(href=base_url) #{home_title}
-						li: span #{header_menu_active}
-					h1.color-black #{header_menu_active}
+						li: span #{account_menu_active}
+					h1.color-black #{account_menu_active}
 			//- Content
-			#content.promotions_content
+			#content.edit_content
+				section.s-account
+					.container_fix
+						.row
+							.col_1-4
+								//- Account menu
+								include ../partials/account-menu.pug
+							.col_3-4
 
 		//- Features
 		include ../partials/s-features.pug

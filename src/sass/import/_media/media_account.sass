@@ -14,7 +14,22 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.account-nav
+		min-height: auto
+		margin-bottom: 50px
+		text-align: center
+		&::after
+			display: none
+		li
+			display: inline-block
+			vertical-align: top
+			margin-bottom: 5px
+	.s-account
+		.col_1-4,
+		.col_3-4
+			width: calc(100% - 20px)
+		.col_3-4
+			text-align: center
 
 /* Medium Devices */
 @media only screen and (max-width : 1024px)
@@ -50,11 +65,22 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.account-nav
+		margin-bottom: 30px
+		li a
+			padding-top: 8px
+			padding-bottom: 9px
+	.s-account
+		padding-top: 30px
+		padding-bottom: 50px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 400px)
-	/**/
+	.account-nav
+		li
+			width: 100%
+			a
+				width: 100%
 
 
 /* Custom, iPhone Retina */

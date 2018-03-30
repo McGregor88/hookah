@@ -1,0 +1,49 @@
+/**
+ * Account styles
+ */
+
+.account-nav
+    min-height: 387px
+    &::after
+        position: absolute
+        content: ""
+        top: 0
+        right: 23px
+        width: 1px
+        height: 100%
+        background: #efefef
+    li
+        font-family: $medium
+        margin-bottom: 2px
+        &.active,
+        &:hover
+            a
+                background: #232323
+                color: #fff
+        &.active
+            cursor: default
+            pointer-events: none
+        a
+            padding:
+                top: 10px
+                left: 14px
+                right: 14px
+                bottom: 11px
+            display: inline-block
+            border-radius: 4px
+            color: #4f4f4f
+            transition: background-color .25s ease, color .25s ease
+
+.s-account
+    padding-top: 50px
+    padding-bottom: 80px
+    h2
+        margin-top: -3px
+        margin-bottom: 36px
+    p
+        font-size: 18px
+        font-family: $medium
+        a
+            color: #777
+            &:hover
+                color: $accent

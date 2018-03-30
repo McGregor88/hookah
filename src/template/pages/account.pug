@@ -1,5 +1,6 @@
 //- Variables
-- var header_menu_active = "Акции и спецпредложения";
+- var header_menu_active = "";
+- var account_menu_active = "Личный кабинет";
 
 doctype html
 html(lang="ru")
@@ -8,15 +9,28 @@ html(lang="ru")
 	body
 		include ../partials/common/header.pug
 
-		#information-information
+		#account-account
 			.page-heading.gray-theme
 				.container_fix.text-center
 					ul.breadcrumb
 						li: a(href=base_url) #{home_title}
-						li: span #{header_menu_active}
-					h1.color-black #{header_menu_active}
+						li: span #{account_menu_active}
+					h1.color-black #{account_menu_active}
 			//- Content
-			#content.promotions_content
+			#content.account_content
+				section.s-account
+					.container_fix
+						.row
+							.col_1-4
+								//- Account menu
+								include ../partials/account-menu.pug
+							.col_3-4
+								h2.color-black Добро пожаловать в Ваш личный кабинет!
+								- var history = "историю заказов и платежей,";
+								- var contacts = "контакты.";
+								p.
+									Здесь Вы сможете просматривать Вашу #[a(href="order.html") #{history}] изменять свои личные данные, такие как: 
+									#[a(href="password.html") пароль] и #[a(href="edit.html") #{contacts}] Для дальнейшего действия воспользуйтесь навигацией слева.
 
 		//- Features
 		include ../partials/s-features.pug
