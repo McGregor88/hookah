@@ -1,5 +1,6 @@
 //- Variables
 - var header_menu_active = "";
+- var pagititle = "Страница не найдена";
 
 doctype html
 html(lang="ru")
@@ -9,15 +10,15 @@ html(lang="ru")
 		include ../partials/common/header.pug
 
 		#error-not-found
-			.page-heading.gray-theme
-				.container_fix.text-center
-					ul.breadcrumb
-						li: a(href=base_url) #{home_title}
-						li: span #{header_menu_active}
-					h1.color-black #{header_menu_active}
 			//- Content
 			#content.error_content
-				section.s-error
+				section.s-error(style={"background-image":"url(src/image/404.png)"})
+					.container_fix.text-center
+						h1 #{pagititle}
+						p.
+							К сожалению, такой страницы не существует, #[br]
+							либо она была удалена
+						a.btn.btn-lg.btn-primary(href=base_url) Перейти на главную
 
 		//- Features
 		include ../partials/s-features.pug
