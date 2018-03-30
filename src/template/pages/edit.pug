@@ -1,6 +1,7 @@
 //- Variables
 - var header_menu_active = "";
 - var account_menu_active = "Изменить мои контакты";
+- var pagetitle = "Личный кабинет";
 
 doctype html
 html(lang="ru")
@@ -14,17 +15,36 @@ html(lang="ru")
 				.container_fix.text-center
 					ul.breadcrumb
 						li: a(href=base_url) #{home_title}
-						li: span #{account_menu_active}
-					h1.color-black #{account_menu_active}
+						li: span #{pagetitle}
+					h1.color-black #{pagetitle}
 			//- Content
 			#content.edit_content
-				section.s-account
+				section.s-edit
 					.container_fix
 						.row
 							.col_1-4
 								//- Account menu
 								include ../partials/account-menu.pug
 							.col_3-4
+								h2.color-black #{account_menu_active}
+								.panel-head.gray-theme
+									h4 Ваша контактная информация
+								.form__body
+									form.edit__form(action="" method="post" enctype="multipart/form-data")
+										.edit__form__inner
+											.fieldset
+												.form-field.required
+													input.form-control#input-firstname(type="text" name="firstname" value="" placeholder="Имя" required="")/
+												.form-field.required
+													input.form-control#input-telephone(type="tel" name="telephone" value="" placeholder="Телефон" required="")/
+												.form-field.required
+													input.form-control#input-email(type="email" value="" name="email" placeholder="E-mail" required="")/
+												.form-field.required
+													input.form-control#input-address(type="text" value="" name="address" placeholder="Адрес" required="")/
+											.consent
+												span Нажимая кнопку, Вы соглашаетесь с #[a(href="javascript:void(0);") условиями] по обработке Ваших персональных данных
+											.form-buttons
+												input.btn.btn-lg.btn-primary(type="submit" value="Сохранить изменения" class="btn btn-primary")/
 
 		//- Features
 		include ../partials/s-features.pug
