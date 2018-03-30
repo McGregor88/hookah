@@ -3,18 +3,19 @@
  */
 /* Orders table */
 
+.table>thead>tr>th
+	vertical-align: middle
+	padding: 0
+	font-size: 22px
+	font-family: $medium
+	line-height: 67px
+	color: #4f4f4f
+	border: none
+	background: #efefef
+
 .products-table
 	.table
 		margin-bottom: 25px
-	.table>thead>tr>th
-		vertical-align: middle
-		padding: 0
-		font-size: 22px
-		font-family: $medium
-		line-height: 67px
-		color: #4f4f4f
-		border: none
-		background: #efefef
 	.table>tbody>tr>td
 		padding: 20px 0
 		border-bottom: 1px solid #efefef
@@ -62,9 +63,6 @@
 			&__quantity
 				.form-field
 					margin-bottom: 0
-			&__button
-				.icon:hover::after
-					opacity: 1
 
 /* Cart total table */
 
@@ -158,3 +156,46 @@
 			font-family: $bold
 			color: #000
 			text-align: right
+
+/* Order table */
+
+.order-table
+	.table
+		margin-bottom: 50px
+	.table>tbody>tr
+		&:first-child
+			td
+				border-top: none
+		>td
+			padding: 36px 0
+			vertical-align: middle
+	.table
+		thead
+			tr
+				th.order-table
+					&__product
+						padding-left: 22px
+						width: 315px
+					&__date
+						width: 188px
+					&__status
+						width: 269px
+					&__price
+						width: 157px
+					&__button
+						width: 39px
+		tbody
+			tr
+				td.order-table
+					&__product
+						padding-left: 22px
+						padding-right: 50px
+						line-height: 1.2em
+					&__status
+						span
+							&.approved
+								color: #119d7a
+							&.not-done
+								color: #ed4429
+					&__price
+						font-size: 24px

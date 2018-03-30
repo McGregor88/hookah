@@ -1,6 +1,7 @@
 //- Variables
 - var header_menu_active = "";
 - var account_menu_active = "История заказов и платежей";
+- var pagetitle = "Личный кабинет";
 
 doctype html
 html(lang="ru")
@@ -14,17 +15,63 @@ html(lang="ru")
 				.container_fix.text-center
 					ul.breadcrumb
 						li: a(href=base_url) #{home_title}
-						li: span #{account_menu_active}
-					h1.color-black #{account_menu_active}
+						li: span #{pagetitle}
+					h1.color-black #{pagetitle}
 			//- Content
 			#content.order_content
-				section.s-account
+				section.s-order
 					.container_fix
 						.row
 							.col_1-4
 								//- Account menu
 								include ../partials/account-menu.pug
 							.col_3-4
+								h2.color-black #{account_menu_active}
+								p Вы еще не совершали платежей в нашем интернет-магазине!
+								.order-table
+									.table-responsive
+										table.table
+											thead
+												tr
+													th.order-table__product Фото
+													th.order-table__date Дата заказа
+													th.order-table__status Состояние платежа
+													th.order-table__price Цена
+													th.order-table__button 
+											tbody
+												tr
+													td.order-table__product
+														a.color-black(href="product.html") Табак для кальяна Al Fakher
+													td.order-table__date.color-black 22.08.17
+													td.order-table__status
+														span.approved Одобрен
+													td.order-table__price.bold.color-black 147 р.
+													td.order-table__button
+														button.btn-close(type="button" data-toggle="tooltip" title="" onclick="order.remove('');" data-original-title="Удалить")
+															span.icon.icon-close.relative.opacity-transition
+												tr
+													td.order-table__product
+														a.color-black(href="product.html") Табак для кальяна Al Fakher с апельсина и цитруса
+													td.order-table__date.color-black 26.09.17
+													td.order-table__status
+														span.not-done Не выполнен
+													td.order-table__price.bold.color-black 5 847 р.
+													td.order-table__button
+														button.btn-close(type="button" data-toggle="tooltip" title="" onclick="order.remove('');" data-original-title="Удалить")
+															span.icon.icon-close.relative.opacity-transition
+												tr
+													td.order-table__product
+														a.color-black(href="product.html") Набор для кальяна Al Fakher очень популярный
+													td.order-table__date.color-black 26.09.17
+													td.order-table__status
+														span В обработке
+													td.order-table__price.bold.color-black 46 р.
+													td.order-table__button
+														button.btn-close(type="button" data-toggle="tooltip" title="" onclick="order.remove('');" data-original-title="Удалить")
+															span.icon.icon-close.relative.opacity-transition
+
+								.order-buttons
+									button.btn.btn-lg.btn-primary(type="button") Очистить весь список
 
 		//- Features
 		include ../partials/s-features.pug
