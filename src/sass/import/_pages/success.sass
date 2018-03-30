@@ -1,0 +1,32 @@
+/**
+ * Success styles
+ */
+.checkout-success
+    &::after
+        position: absolute
+        content: ""
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-image: url("../image/success/success-bg.png")
+        background-repeat: no-repeat
+        background-position: top center 
+.s-success
+    padding-top: 75px
+    padding-bottom: 80px
+    z-index: 5
+    h2
+        margin-bottom: 37px
+    p
+        margin-bottom: 42px
+        font-size: 18px
+        line-height: 1.6em
+        font-family: $medium
+        a
+            color: #777777
+            &:hover
+                color: $accent
+    .success-buttons
+        .btn.btn-dark
+            margin-right: 20px

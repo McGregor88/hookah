@@ -38,7 +38,15 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	.checkout-success::after
+		display: none
+	.s-success
+		.success-buttons
+			.btn.btn-dark
+				margin-right: 0
+				margin-bottom: 10px
+			.btn
+				width: 60%
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 640px)
@@ -50,11 +58,22 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.s-success
+		padding-top: 45px
+		padding-bottom: 40px
+		p
+			font-size: 16px
+			margin-bottom: 30px
+		.success-buttons
+			.btn
+				width: 80%
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 400px)
-	/**/
+	.s-success
+		.success-buttons
+			.btn
+				width: 100%
 
 
 /* Custom, iPhone Retina */

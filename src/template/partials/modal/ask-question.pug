@@ -1,0 +1,16 @@
+.modal#ask-question
+	.modal__head.gray-theme.text-center
+		h3.color-black Задать вопрос
+	.modal__body.text-center
+		form.modal-form#ask-question_form
+			.fieldset
+				.form-field
+					input.form-control(type="text" name="name" placeholder="Имя" required="")/
+				.form-field
+					input.form-control(type="email" name="email" placeholder="E-mail" required="")/
+				.form-field.required
+					textarea.form-control(name="enquiry" minlength="10" placeholder="Сообщение" required="")
+			.consent
+				span Нажимая кнопку, Вы соглашаетесь с #[a(href="javascript:void(0);") условиями] по обработке Ваших персональных данных
+			.form-buttons
+				button(type="submit" class="btn btn-lg btn-primary") Отправить сообщение

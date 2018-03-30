@@ -1,5 +1,6 @@
 //- Variables
-- var header_menu_active = "Акции и спецпредложения";
+- var header_menu_active = "";
+- var pagetitle = "Заказ оформлен";
 
 doctype html
 html(lang="ru")
@@ -8,20 +9,31 @@ html(lang="ru")
 	body
 		include ../partials/common/header.pug
 
-		#information-information
+		#checkout-success.checkout-success.relative
 			.page-heading.gray-theme
 				.container_fix.text-center
 					ul.breadcrumb
 						li: a(href=base_url) #{home_title}
-						li: span #{header_menu_active}
-					h1.color-black #{header_menu_active}
+						li: a(href="cart.html") Ваша корзина
+						li: a(href="checkout.html") Оформление заказа
+						li: span #{pagetitle}
+					h1.color-black #{pagetitle}
 			//- Content
-			#content.promotions_content
+			#content.success_content
+				section.s-success.relative.text-center
+					.container_fix
+						h2.color-black Поздравляем! Ваш заказ #[b №6576765] успешно оформлен!
+						- var lk = "Личном кабинете.";
+						p.
+							Вы можете просматривать свою историю заказов у себя в #[a(href="account.html") #{lk}]  #[br]
+							Если у Вас остались какие либо вопросы, #[a(href="javascript:void(0);" data-fancybox="" data-src="#ask-question") пишите] или #[a(href="tel:79251000399") звоните] нам, мы обязательно Вам ответим! #[br]
+							Спасибо за покупки в нашем интернет-магазине!
+						.success-buttons
+							a.btn.btn-lg.btn-dark(href="checkout.html") #[span(class="icon icon-back")] Вернуться в корзину
+							a.btn.btn-lg.btn-primary(href=base_url) Перейти на главную
 
 		//- Features
 		include ../partials/s-features.pug
-		//- Bottom content
-		include ../partials/bottom_content.pug
 
 		include ../partials/common/footer.pug			
 		include ../partials/common/js.pug
