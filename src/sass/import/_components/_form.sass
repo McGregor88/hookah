@@ -1,17 +1,17 @@
 *::-webkit-input-placeholder
-    color: #666
+    color: #a9a9a9
     opacity: 1
 
 *:-moz-placeholder
-    color: #666
+    color: #a9a9a9
     opacity: 1
 
 *::-moz-placeholder
-    color: #666
+    color: #a9a9a9
     opacity: 1
 
 *:-ms-input-placeholder
-    color: #666
+    color: #a9a9a9
     opacity: 1
 
 input[type=number]::-webkit-outer-spin-button,
@@ -24,13 +24,12 @@ input[type='number']
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-    color: #666
-    border-color: #f16c6c
-    border-color: #d7d7d7
+    color: #a9a9a9
+    border-color: #f32e0d
 body input:required:valid,
 body textarea:required:valid
-    color: #141414
-    border-color: #d7d7d7
+    color: #232323
+    border-color: #acacac
 
 input[type=checkbox],
 input[type=radio]
@@ -51,8 +50,6 @@ textarea
 	transition: border-color .25s ease
 	&::placeholder
 		color: #a9a9a9
-	&.error
-		border-color: #f00 !important
 
 /*	Form field	*/
 .form-field
@@ -93,6 +90,9 @@ textarea
 		&:hover .icon
 			&::after
 				opacity: 1
+	&.has-error
+		.form-control
+			border-color: #f32e0d !important
 
 /* Quantity */
 .quantity
