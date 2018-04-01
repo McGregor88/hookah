@@ -36,6 +36,12 @@ input[type=checkbox],
 input[type=radio]
     margin: 0
 
+input:not([type=checkbox]):not([type=radio]),
+textarea
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+
 /**
  * Form elements
  */
@@ -338,6 +344,9 @@ input[type=radio]
 .select2-container
 	margin-top: 2px
 
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+	color: #a9a9a9
+
 /*	Select box	*/
 .select-box
 	font-size: 0
@@ -369,7 +378,7 @@ input[type=radio]
 				padding-left: 22px
 				padding-right: 35px
 				line-height: 48px
-				color: #a9a9a9
+				color: #232323
 	.select2-container--default
 		.select2-selection--single
 			.select2-selection__arrow

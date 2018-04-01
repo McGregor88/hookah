@@ -46,7 +46,8 @@ html(lang="ru")
 												.select-box
 													.select-control
 														- var options = ["Московская область", "Смоленская область", "Калужская область", "Брянская область"];
-														select#select-region.select
+														select#select-region.select(data-placeholder="Выбрать область")
+															option
 															each item in options
 																option #{item}
 											.col
@@ -64,7 +65,8 @@ html(lang="ru")
 													label.control-label(for="select-time") Время доставки
 													.select-control
 														- var options = ["с 09:00 до 13:00", "с 14:00 до 17:00", "с 18:00 до 22:00"];
-														select#select-time.select
+														select#select-time.select(data-placeholder="Выбрать время")
+															option
 															each item in options
 																option #{item}
 								.panel-head.gray-theme
@@ -76,7 +78,8 @@ html(lang="ru")
 												.select-box
 													.select-control
 														- var options = ["Курьером", "Самовывоз", "Почтой"];
-														select#select-delivery-method.select
+														select#select-delivery-method.select(data-placeholder="Выбрать доставку")
+															option
 															each item in options
 																option #{item}
 											.col_1-2
