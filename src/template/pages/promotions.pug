@@ -1,6 +1,11 @@
 //- Variables
 - var header_menu_active = "Акции и спецпредложения";
 
+//- Mixins
+include ../mixins/checkbox
+include ../mixins/radio
+include ../mixins/product
+
 doctype html
 html(lang="ru")
 	head
@@ -8,7 +13,7 @@ html(lang="ru")
 	body
 		include ../partials/common/header.pug
 
-		#information-information
+		#product-search
 			.relative.container_fix
 				.alert.alert-success.alert-dismissible.color-white(style={"display":"none"})
 					span Товар добавлен в корзину!
@@ -19,13 +24,371 @@ html(lang="ru")
 						li: a(href=base_url) #{home_title}
 						li: span #{header_menu_active}
 					h1.color-black #{header_menu_active}
-			//- Content
-			#content.promotions_content
+		.catalog_content
+			.catalog_content__inner
+				.container_fix
+					.row
+						.col_1-4
+							//- Aside
+							aside#column-left
+								.aside-categories
+									.panel-head.gray-theme
+										h4 Категории товаров
+									ul
+										li
+											a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#categories-list_0" aria-expanded="false" aria-controls="categories-list_0") #[span(class="icon icon-arrow--right")] Безникотиновая смесь для кальяна
+											#categories-list_0.collapse
+												//- Variable
+												-
+													var items = [
+														"Смесь 1",
+														"Смесь 2",
+														"Смесь 3"
+													];
+												.list-group
+													each item in items
+														a.list-group-item(href="javascript:void(0);") #{item}
+										li
+											a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#categories-list_1" aria-expanded="false" aria-controls="categories-list_1") #[span(class="icon icon-arrow--right")] Кальяны
+											#categories-list_1.collapse
+												//- Variable
+												-
+													var items = [
+														"Классика",
+														"Престиж",
+														"Большие VIP кальяны",
+														"Кальяны Мудуза",
+														"Khalil Mamoon (Египет)",
+														"Турецкие кальяны Turkish Nargile",
+														"Электронный кальян SQUARE",
+														"Немецкий кальян Amy Deluxe",
+														"Электронный кальян SQUARE",
+													];
+												.list-group
+													each item in items
+														a.list-group-item(href="javascript:void(0);") #{item}
+										li
+											a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#categories-list_2" aria-expanded="false" aria-controls="categories-list_2") #[span(class="icon icon-arrow--right")] Курительные камни
+											#categories-list_2.collapse
+												//- Variable
+												-
+													var items = [
+														"Камень 1",
+														"Камень 2",
+														"Камень 3"
+													];
+												.list-group
+													each item in items
+														a.list-group-item(href="javascript:void(0);") #{item}
+										li
+											a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#categories-list_3" aria-expanded="false" aria-controls="categories-list_3") #[span(class="icon icon-arrow--right")] Табак для кальяна
+											#categories-list_3.collapse
+												//- Variable
+												-
+													var items = [
+														"Табак 1",
+														"Табак 2",
+														"Табак 3"
+													];
+												.list-group
+													each item in items
+														a.list-group-item(href="javascript:void(0);") #{item}
+										li
+											a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#categories-list_4" aria-expanded="false" aria-controls="categories-list_4") #[span(class="icon icon-arrow--right")] Уголь для кольяна
+											#categories-list_4.collapse
+												//- Variable
+												-
+													var items = [
+														"Кокосовый",
+														"Древесный",
+														"Быстровоспламеняющийся"
+													];
+												.list-group
+													each item in items
+														a.list-group-item(href="javascript:void(0);") #{item}
+										li
+											a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#categories-list_5" aria-expanded="false" aria-controls="categories-list_5") #[span(class="icon icon-arrow--right")] Аксессуары
+											#categories-list_5.collapse
+												//- Variable
+												-
+													var items = [
+														"Аксессуар 1",
+														"Аксессуар 2",
+														"Аксессуар 3"
+													];
+												.list-group
+													each item in items
+														a.list-group-item(href="javascript:void(0);") #{item}
+								.aside-manufacturers
+									a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#manufacturers-list" aria-expanded="false" aria-controls="manufacturers-list")
+										.panel-head.panel-collapse.gray-theme
+											h4 Производители
+									#manufacturers-list.collapse
+										.checkboxes.checkboxes-inline.wrapper
+											+checkbox({
+												checked: true,
+												id: "ager",	
+												label: "Ager"
+											})
+											+checkbox({
+												id: "hookah",
+												label: "Hookah"
+											})
+											+checkbox({
+												checked: true,
+												id: "amy-deluxe",
+												label: "Amy Deluxe"
+											})
+											+checkbox({
+												checked: true,
+												id: "khalil-mamoon",
+												label: "Khalil Mamoon"
+											})
+											+checkbox({
+												id: "babilon",
+												label: "Babilon"
+											})
+											+checkbox({
+												checked: true,
+												id: "magic",
+												label: "Magic"
+											})
+											+checkbox({
+												id: "caesar",
+												label: "Caesar"
+											})
+											+checkbox({
+												id: "shapes",
+												label: "Shapes"
+											})
+											+checkbox({
+												id: "damas",
+												label: "Damas"
+											})
+											+checkbox({
+												id: "art-kalyan",
+												label: "АРТ Кальян"
+											})
+								.aside-price
+									a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#price-collapse" aria-expanded="false" aria-controls="price-collapse")
+										.panel-head.panel-collapse.gray-theme
+											h4 Цена
+									#price-collapse.collapse
+										.price-filter
+											script(src="src/js/libs/wNumb.js")
+											#slider-tooltips.noUi-target.noUi-ltr.noUi-horizontal
+								.aside-quantity
+									a.collapsed(href="javascript:void(0);" data-toggle="collapse" data-target="#quantity-collapse" aria-expanded="false" aria-controls="quantity-collapse")
+										.panel-head.panel-collapse.gray-theme
+											h4 Количество шлангов
+									#quantity-collapse.collapse
+										.checkboxes.checkboxes-inline.wrapper
+											+checkbox({
+												checked: true,
+												id: "one_hoses",	
+												label: "Один"
+											})
+											+checkbox({
+												id: "two_hoses",
+												label: "Два"
+											})
+											+checkbox({
+												checked: true,
+												id: "three_hoses",
+												label: "Три"
+											})
+											+checkbox({
+												checked: true,
+												id: "four_hoses",
+												label: "Четыре"
+											})
+						.col_3-4
+							//- Content
+							#content
+								.catalog-head.gray-theme
+									.row
+										.col_1-2
+											span.caption Сортировка по:
+											.radio-buttons.radio-inline.wrapper
+												+radio({
+													checked: true,
+													name: "sorting",
+													id: "sorting_1",
+													label: "Новизне"
+												})
+												+radio({
+													name: "sorting",
+													id: "sorting_2",
+													label: "Дешевые"
+												})
+												+radio({
+													name: "sorting",
+													id: "sorting_3",
+													label: "Дорогие"
+												})
+										.col_1-2.text-right
+											span.caption Показать по:
+											.radio-buttons.radio-inline.wrapper
+												+radio({
+													checked: true,
+													name: "show_by",
+													id: "show_by_18",
+													label: "18"
+												})
+												+radio({
+													name: "show_by",
+													id: "show_by_36",
+													label: "36"
+												})
+												+radio({
+													name: "show_by",
+													id: "show_by_all",
+													label: "Все"
+												})
+								//- Products
+								.catalog-products
+									.products
+										.row
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_1",
+													name: "Кальян Ager (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_3",
+													name: "Кальян Ager",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_1",
+													name: "Кальян Magic (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col
+												.promotion-block.color-white(style={"background-image":"url(src/image/promo/promotion.jpg)"})
+													.promotion__title
+														h2.black-theme.bold Кальян Ager
+													.row
+														.col_1-3
+															p.promotion__price
+																span.promotion__price-new.bold 5 450 р.
+																span.promotion__price-old 6500 р.
+														.col_1-2
+															button.btn.btn-sm.btn-primary(type="button" onclick="cart.add('10');")
+																span Добавить в корзину
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_1",
+													name: "Кальян Ager (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_2",
+													name: "Кальян Amy Deluxe (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_3",
+													name: "Кальян Ager (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_1",
+													name: "Кальян Magic (Brown) современный",
+													price: "6 789 р.",
+													btn: "В корзину"
+												})
+											.col_1-3
+												+product({
+													sale: true,
+													imgUrl: "pop/product_2",
+													name: "Кальян Ager (Purple)",
+													price: "3 627 р.",
+													btn: "В корзину"
+												})
+									.catalog-buttons
+										.row
+											.col_1-2
+												button.btn.btn-lg.btn-primary(type="button") Показать еще
+											.col_1-2.text-right
+												//- Pagination
+												include ../partials/components/pagination.pug
 
 		//- Features
 		include ../partials/s-features.pug
 		//- Bottom content
 		include ../partials/bottom_content.pug
 
-		include ../partials/common/footer.pug			
+		include ../partials/common/footer.pug
 		include ../partials/common/js.pug
+
+		script.
+		
+			var tooltipSlider = document.getElementById('slider-tooltips');
+			
+			noUiSlider.create(tooltipSlider, {
+				start: [0, 56999],
+				connect: true,
+				tooltips: true,
+				range: {
+					'min': 0,
+					'15%': 1000,
+					'max': 18000
+				},
+				format: wNumb({
+					decimals: 0,
+					thousand: ' ',
+					postfix: ' ',
+				})
+			});
