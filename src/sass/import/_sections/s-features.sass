@@ -8,14 +8,36 @@
 			top: 40px
 			bottom: 40px
 	.feature-item
-		position: relative
-		width: 33.33%
 		padding:
 			top: 34px
 			left: 160px
 			right: 5px
 			bottom: 29px
 		cursor: default
+		&:first-child,
+		&:last-child
+			width: calc((100% - 460px) / 2)
+		&:nth-child(2)
+			padding-left: 195px
+			width: 460px
+			.feature-item__img
+				left: 36px
+			&::after,
+			&::before
+				position: absolute
+				content: ""
+				top: 0
+				width: 1px
+				height: 100%
+				background: #292929
+			&::after
+				left: 0
+			&::before
+				right: 0
+		&:last-child
+			padding-left: 200px
+			.feature-item__img
+				left: 40px
 		&__img
 			position: absolute
 			top: 0
