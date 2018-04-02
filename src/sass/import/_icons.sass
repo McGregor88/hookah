@@ -209,6 +209,7 @@
 		&::after
 			background-image: url("../image/icons/sprite_icons.png")
 			background-position: 0px -80px
+			background-color: #fff
 	&.icon-lock
 		margin-top: 15px
 		width: 14px
@@ -224,3 +225,33 @@
 			background-position: -125px -38px
 			&::after
 				background-position: -125px -78px
+
+.dropdown-menu
+	.icon
+		&.icon-up,
+		&.icon-down
+			width: 11px
+			height: 5px
+			margin-top: 6px
+			background-image: url("../image/icons/sprite_dropdown.png")
+			&::after
+				background-image: url("../image/icons/sprite_dropdown.png")
+				background-color: #fff
+		&.icon-up
+			background-position: 0px -55px
+			&::after
+				background-position: -60px -25px
+		&.icon-down
+			background-position: -60px 0px
+			&::after
+				background-position: 0px -30px
+		&.icon-close
+			vertical-align: middle
+			width: 10px
+			height: 10px
+			background-image: url("../image/icons/sprite_dropdown.png")
+			background-position: -30px 0px
+			&::after
+				background-image: url("../image/icons/sprite_dropdown.png")
+				background-position: 0px 0px
+				background-color: #fff

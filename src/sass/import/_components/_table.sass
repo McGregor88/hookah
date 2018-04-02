@@ -199,3 +199,95 @@
 								color: #ed4429
 					&__price
 						font-size: 24px
+
+/* Dropdown table */
+.dropdown-table
+	padding-left: 20px
+	padding-right: 20px
+	.table
+		margin-bottom: 9px
+		> tbody
+			> tr
+				> td
+					padding: 20px 0
+					border-top: none
+					border-bottom: 1px solid #efefef
+					&.dropdown-table
+						&__photo
+							padding-right: 12px
+		.dropdown-table
+			&__photo
+				.img-thumbnail
+					display: block
+					padding: 10px 0
+					width: 80px
+					height: 80px
+					border-color: #efefef
+					border-radius: 0
+					transition: border-color .25s ease
+					img
+						max-height: 100%
+						margin-left: auto
+						margin-right: auto
+					&:hover
+						border-color: $accent
+			&__info
+				&__wrapper
+					height: 80px
+				&__name
+					display: block
+					line-height: 1.2em
+				.quantity
+					position: absolute
+					bottom: 0
+					left: 0
+					.form-field
+						margin-right: 12px
+						margin-bottom: 0
+						width: 87px
+						height: 32px
+					.form-control
+						padding-left: 12px
+						font-size: 12px
+					span.icon
+						position: relative
+						top: auto
+						left: auto
+					.quantity-button.quantity-up
+						height: 15px
+					.quantity-button.quantity-down
+						top: 16px
+						bottom: unset
+						height: 15px
+						.icon.icon-down
+							margin-top: 3px
+				&__price
+					display: inline-block
+					vertical-align: top
+					font-size: 16px
+					line-height: 30px
+			&__button
+				position: relative
+				top: auto
+				left: auto
+	&__button
+		width: 18px
+
+/* Dropdown total table */
+.dropdown-total-table
+	padding-right: 20px
+	width: 172px
+	margin-left: auto
+	.table
+		margin-bottom: 11px
+		>tbody>tr>td
+			padding: 2px 0
+			vertical-align: middle
+			border: none
+			&:first-child
+				font-family: $medium
+				color: #4f4f4f
+			&:last-child
+				font-size: 24px
+				font-family: $bold
+				color: #000

@@ -195,3 +195,34 @@ header
     &::after
         top: 0
         transform: rotate(-45deg)
+
+/* Dropdown */
+
+header
+	.dropdown-menu
+		margin-top: 18px
+		padding: 0
+		min-width: 350px
+		font-size: 14px
+		border: none
+		border-radius: 0
+		li
+			padding: 0
+			display: block
+		&::after
+			position: absolute
+			content: ""
+			top: -11px
+			left: 25px
+			width: 0
+			height: 0
+			border-left: 11px solid transparent
+			border-right: 11px solid transparent
+			border-bottom: 12px solid #fff
+
+.dropdown-buttons
+	padding:
+		top: 20px
+		left: 20px
+		right: 20px
+		bottom: 17px

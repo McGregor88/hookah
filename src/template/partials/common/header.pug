@@ -27,6 +27,51 @@ header.page-header
                                         span.top-links__title.bold.hidden-1200 Ваша корзина
                                         button.dropdown-toggle.hidden-1200(type="button" data-toggle="dropdown" data-loading-text="Загрузка...")
                                             span#cart-total 0 товаров
+                                        //- Dropdown menu
+                                        ul.dropdown-menu.pull-left
+                                            li
+                                                .dropdown-table
+                                                    table.table
+                                                        tbody
+                                                            tr
+                                                                td.dropdown-table__photo
+                                                                    a(href="product.html")
+                                                                        .img-thumbnail: img.img-responsive(src="src/image/products/hit/product_1.jpg" alt="Табак для кальяна")/
+                                                                td.dropdown-table__info
+                                                                    .dropdown-table__info__wrapper.relative
+                                                                        a.dropdown-table__info__name.color-black(href="product.html") Табак для кальяна Al Fakher апельсиновый запах
+                                                                        .quantity.text-left
+                                                                            .form-field
+                                                                                input.form-control(type="number" name="quantity[]" min="1" max="999" step="1" value="1" size="1")/
+                                                                            span.dropdown-table__info__price.products-table__info__price.bold.color-black 147 р.
+                                                                td.dropdown-table__button
+                                                                    button.btn-close(type="button" onclick="cart.remove('');" title="Удалить")
+                                                                        span.icon.icon-close.relative.opacity-transition
+                                                            tr
+                                                                td.dropdown-table__photo
+                                                                    a(href="product.html")
+                                                                        .img-thumbnail: img.img-responsive(src="src/image/products/sale/product_1.jpg" alt="Табак для кальяна")/
+                                                                td.dropdown-table__info
+                                                                    .dropdown-table__info__wrapper.relative
+                                                                        a.dropdown-table__info__name(href="product.html") Табак для кальяна Al Fakher апельсиновый запах
+                                                                        .quantity.text-left
+                                                                            .form-field
+                                                                                input.form-control(type="number" name="quantity[]" min="1" max="999" step="1" value="1" size="1")/
+                                                                            span.dropdown-table__info__price.bold.color-black 500 р.
+                                                                td.dropdown-table__button
+                                                                    button.btn-close(type="button" onclick="cart.remove('');" title="Удалить")
+                                                                        span.icon.icon-close.relative.opacity-transition
+                                            li
+                                                .dropdown-total-table
+                                                    table.table
+                                                        tbody
+                                                            tr
+                                                                td.text-left Итого:
+                                                                td.text-right 6 147 р.
+                                                .dropdown-buttons.gray-theme
+                                                    p.text-center
+                                                        a.btn.btn-md.btn-block.btn-primary(href="cart.html") Перейти в корзину&nbsp;&nbsp;&nbsp;
+
                                 li
                                     .header-user
                                         a(href="account.html")
