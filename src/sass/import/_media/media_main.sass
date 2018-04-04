@@ -43,6 +43,41 @@
 	.radio+label
 		padding: 0 18px
 
+	/* Product */
+	.product-layout
+		height: auto
+		padding-bottom: 20px
+		.image-wrapper
+			height: 300px
+		.caption
+			padding-left: 10px
+			padding-right: 10px
+		h4
+			min-height: 34px
+		.price
+			margin-bottom: 10px
+		button
+			position: static
+			display: block
+			width: 80%
+			margin-left: auto
+			margin-right: auto
+			opacity: 1
+		&.product--focused
+        	.caption
+            	opacity: 1
+
+	.products-sale
+		.product-layout
+			button
+				width: 80%
+				margin-left: auto
+				margin-right: auto
+
+	/* Alert */
+	.alert.alert-success
+		top: 85px
+
 /* Medium Devices */
 @media only screen and (max-width : 1024px)
 	/* Bottom content */
@@ -112,16 +147,17 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 640px)
-	/* Products */
+	/* Product */
 	.product-layout
 		button
-			width: 200px
-			margin-left: -100px
+			width: 90%
+			&.btn.btn-lg
+				padding-left: 20px
+				padding-right: 20px
 	.products-sale
 		.product-layout
-			.btn.btn-lg
-				padding-left: 0
-				padding-right: 0
+			button
+				width: 90%
 
 /* HTC One */
 @media only screen and (max-width : 540px)
@@ -205,17 +241,12 @@
 		padding-top: 25px
 		padding-bottom: 25px
 	.product-layout
-		height: 400px
 		.image-wrapper
-			height: 290px
+			height: 280px
 		img
 			max-height: 80%
-		.caption
-			padding-left: 15px
-			padding-right: 15px
-		button
-			width: 250px
-			margin-left: -125px
+		h4
+			margin-bottom: 5px
 
 	.products
 		.col_1-3
@@ -271,6 +302,12 @@
 			p
 				font-size: 20px
 
+	/* Alert */
+	.alert.alert-success
+		top: 75px
+		padding-top: 10px
+		padding-bottom: 9px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 400px)
 	.fancybox-slide
@@ -299,6 +336,10 @@
 		blockquote
 			p
 				font-size: 18px
+
+	/* Alert */
+	.alert.alert-success
+		top: 60px
 
 
 /* Custom, iPhone Retina */
