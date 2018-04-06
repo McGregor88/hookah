@@ -18,8 +18,10 @@
 		.col_1-4,
 		.col_3-4
 			width: calc(100% - 20px)
-		.col_3-4::after
-			display: none
+		.col_3-4
+			min-height: auto
+			&::after
+				display: none
 		h2,p,.order-buttons
 			text-align: center
 
