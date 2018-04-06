@@ -87,8 +87,17 @@
 			padding-right: 0
 
 	/* Page-content */
-	.page-content .info-list__item
-		cursor: pointer
+	.page-content
+		.info-list
+			&__item
+				cursor: pointer
+				&:hover
+					.info-list__item__num
+						color: #ccc
+				&.active
+					.info-list__item__num
+						color: $accent
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)

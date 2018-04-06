@@ -37,6 +37,12 @@
 	.s-features
 		.feature-item
 			cursor: pointer
+			&:hover
+				.feature-item__img
+					background-color: #292929
+			&.active
+				.feature-item__img
+					background-color: #fff
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)

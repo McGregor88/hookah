@@ -108,6 +108,19 @@ $(document).ready(function() {
     });
   }
 
+  // List-item touchstart
+  if ($(".js-hover").length) {
+    $(".js-hover").on("touchstart", function(e){
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        return false;
+      } else {
+        $(".js-hover.active").removeClass("active")
+        $(this).addClass("active");
+      }
+    });
+  }
+
   // Password inputs
   $(".js-lock-field").each(function(index, item){
     var input = $(item).find("input");
