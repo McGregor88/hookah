@@ -58,12 +58,15 @@ html(lang="ru")
 												.form-field.required
 													input.form-control#input-payment-address(type="text" name="address" value="" placeholder="Адрес")/
 											.col_1-2
+
+
 												.form-field.required
 													.input-group.date
-														input.form-control#input-option(type="text" name="option" value="" data-date-format="DD-MM-YYYY" placeholder="Дата доставки	")/
-														span.input-group-btn
+														input.form-control(type='text' data-date-format="DD-MM-YYYY" placeholder="Дата доставки")/
+														span.input-group-addon
 															button.btn.btn-default(type="button")
 																span.icon.icon-date.relative.opacity-transition
+
 											.col_1-2
 												.select-box.with-label
 													label.control-label(for="select-time") Время доставки
@@ -171,6 +174,13 @@ html(lang="ru")
 		include ../partials/common/js.pug
 
 		script.
+
+			$(function () {
+				$('.date').datetimepicker({
+					locale: 'ru'
+				});
+			});
+
 			var productsSwiper = new Swiper('.products-swiper-container', {
 				slidesPerView: 4,
 				spaceBetween: 20,

@@ -31,7 +31,10 @@ gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'src/libs/jquery/dist/jquery.min.js',
 		'src/libs/jquery-ui-1.12.1/jquery-ui.min.js',
+		'src/libs/moment/moment.min.js',
+		'src/libs/moment/moment-with-locales.min.js',
 		'src/libs/bootstrap/js/bootstrap.min.js',
+		'src/libs/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
 		'src/libs/fancybox/dist/jquery.fancybox.min.js',
 		'src/libs/swiper/dist/js/swiper.min.js',
 		'src/libs/nouislider/nouislider.min.js',
