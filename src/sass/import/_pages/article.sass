@@ -78,3 +78,22 @@
         &:hover
             background: $accent
             color: #fff
+
+article
+    ol
+        margin: 40px 0
+        counter-reset: myCounter
+        li
+            position: relative
+            margin-bottom: 20px
+            font-size: 18px
+            line-height: 1.5em
+            list-style: none
+            cursor: pointer
+            &:before
+                counter-increment: myCounter
+                content: counter(myCounter) '. '
+                font-family: $bold
+                transition: color .25s ease
+            &:hover:before
+                color: $accent
